@@ -3,3 +3,4 @@
 /.cache
 pipex
 compile_commands.json
+save.sh
