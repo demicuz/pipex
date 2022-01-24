@@ -1,0 +1,5 @@
+/lib
+/obj
+/.cache
+pipex
+compile_commands.json
