@@ -126,7 +126,7 @@ char	*search_PATH(char *dirs[], char *slash_name)
 }
 
 // If path is not found, returns name. It will throw "No such file or directory"
-// error later in exec anyway. Implicit is better than implicit. Not my case.
+// error later in exec anyway. Explicit is better than implicit. Not my case.
 char	*get_path(char *name, const char *envp[])
 {
 	int		i;
