@@ -1,0 +1,2556 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mlx_des",
+				"mlx_destroy_window"
+			],
+			[
+				"mlx_hook",
+				"mlx_hook"
+			],
+			[
+				"get_ship",
+				"get_ship_pixel_smooth"
+			],
+			[
+				"c",
+				"c_re"
+			],
+			[
+				"type",
+				"fr_type"
+			],
+			[
+				"get_ju",
+				"get_julia_pixel_smooth"
+			],
+			[
+				"get_ma",
+				"get_mandelbrot_pixel_acid"
+			],
+			[
+				"get_juli",
+				"get_julia_pixel_orbit"
+			],
+			[
+				"float",
+				"float_parser.h>"
+			],
+			[
+				"ft_is",
+				"ft_isdigit"
+			],
+			[
+				"ma",
+				"max_iter"
+			],
+			[
+				"LI",
+				"LIBFT_DIR"
+			],
+			[
+				"SRC",
+				"SRC_FILES"
+			],
+			[
+				"mlx_loop",
+				"mlx_loop"
+			],
+			[
+				"t_img",
+				"t_imgdata"
+			],
+			[
+				"t_ig",
+				"t_imgdata"
+			],
+			[
+				"VIWE",
+				"VIEW_W"
+			],
+			[
+				"mlx_expo",
+				"mlx_int_wait_first_expose"
+			],
+			[
+				"mlx_expose",
+				"mlx_int_wait_first_expose"
+			],
+			[
+				"mlx_mou",
+				"mlx_mouse_hook"
+			],
+			[
+				"ft_",
+				"ft_atoi"
+			],
+			[
+				"libf",
+				"libft.h>"
+			],
+			[
+				"pr",
+				"printf"
+			],
+			[
+				"LIB",
+				"LIBFT_DIR"
+			],
+			[
+				"LB",
+				"LIBFT"
+			],
+			[
+				"ft_print",
+				"ft_print_pointer"
+			],
+			[
+				"ft_st",
+				"ft_strlen"
+			],
+			[
+				"cha",
+				"chars_read"
+			],
+			[
+				"ft_lst",
+				"ft_lst_add"
+			],
+			[
+				"wo",
+				"word_start"
+			],
+			[
+				"word",
+				"word_end"
+			],
+			[
+				"b",
+				"b_pos"
+			],
+			[
+				"wod",
+				"word_start"
+			],
+			[
+				"ft_putnb",
+				"ft_putnbr_fd"
+			],
+			[
+				"sr",
+				"str_end"
+			],
+			[
+				"chars",
+				"chars_read"
+			],
+			[
+				"char",
+				"chars_ahead"
+			],
+			[
+				"t_",
+				"t_fd_list"
+			],
+			[
+				"bu",
+				"BUFFER_SIZE"
+			],
+			[
+				"BU",
+				"BUFFER_SIZE"
+			],
+			[
+				"ft_lstadd",
+				"ft_lstadd_front"
+			],
+			[
+				"pf",
+				"printf"
+			],
+			[
+				"BON",
+				"BOUNS_O"
+			],
+			[
+				"for",
+				"for"
+			],
+			[
+				"print",
+				"printf"
+			],
+			[
+				"std",
+				"stdlib"
+			],
+			[
+				"memcp",
+				"memcmp"
+			],
+			[
+				"rea",
+				"break"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/main.c",
+			"settings":
+			{
+				"buffer_size": 1178,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					4,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"AgAAAKIDAAAAAAAAowMAAAAAAAAAAAAAowMAAAAAAACkAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAogMAAAAAAACiAwAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					6,
+					1,
+					"insert",
+					{
+						"characters": "int"
+					},
+					"AwAAAKMDAAAAAAAApAMAAAAAAAAAAAAApAMAAAAAAAClAwAAAAAAAAAAAAClAwAAAAAAAKYDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAowMAAAAAAACjAwAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					7,
+					1,
+					"delete_word",
+					{
+						"forward": false
+					},
+					"AQAAAKMDAAAAAAAAowMAAAAAAAADAAAAaW50",
+					"AQAAAAAAAAABAAAApgMAAAAAAACmAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					8,
+					1,
+					"insert",
+					{
+						"characters": "void"
+					},
+					"BAAAAKMDAAAAAAAApAMAAAAAAAAAAAAApAMAAAAAAAClAwAAAAAAAAAAAAClAwAAAAAAAKYDAAAAAAAAAAAAAKYDAAAAAAAApwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAowMAAAAAAACjAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					9,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAKcDAAAAAAAAqAMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAApwMAAAAAAACnAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					11,
+					1,
+					"insert",
+					{
+						"characters": "\t"
+					},
+					"AgAAAKcDAAAAAAAAqAMAAAAAAAAAAAAAqAMAAAAAAACoAwAAAAAAAAEAAAAg",
+					"AQAAAAAAAAABAAAAqAMAAAAAAACnAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					14,
+					1,
+					"insert",
+					{
+						"characters": "clean_pipes"
+					},
+					"CwAAAKgDAAAAAAAAqQMAAAAAAAAAAAAAqQMAAAAAAACqAwAAAAAAAAAAAACqAwAAAAAAAKsDAAAAAAAAAAAAAKsDAAAAAAAArAMAAAAAAAAAAAAArAMAAAAAAACtAwAAAAAAAAAAAACtAwAAAAAAAK4DAAAAAAAAAAAAAK4DAAAAAAAArwMAAAAAAAAAAAAArwMAAAAAAACwAwAAAAAAAAAAAACwAwAAAAAAALEDAAAAAAAAAAAAALEDAAAAAAAAsgMAAAAAAAAAAAAAsgMAAAAAAACzAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqAMAAAAAAACoAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					15,
+					1,
+					"insert_snippet",
+					{
+						"contents": "($0)"
+					},
+					"AQAAALMDAAAAAAAAtQMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAswMAAAAAAACzAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					17,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAALUDAAAAAAAAtgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtQMAAAAAAAC1AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					18,
+					1,
+					"insert_snippet",
+					{
+						"contents": "{$0}"
+					},
+					"AQAAALYDAAAAAAAAuAMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtgMAAAAAAAC2AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					19,
+					1,
+					"run_macro_file",
+					{
+						"file": "res://Packages/Default/Add Line in Braces.sublime-macro"
+					},
+					"AwAAALcDAAAAAAAAuAMAAAAAAAAAAAAAuAMAAAAAAAC5AwAAAAAAAAAAAAC4AwAAAAAAALkDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtwMAAAAAAAC3AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					21,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAOcDAAAAAAAA6gMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA5wMAAAAAAADnAwAAAAAAAAAAAAAAAEpA"
+				],
+				[
+					22,
+					1,
+					"run_macro_file",
+					{
+						"file": "res://Packages/Default/Add Line.sublime-macro"
+					},
+					"AwAAAP8DAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAABBAAAAAAAAAAAAAC4AwAAAAAAALgDAAAAAAAAAQAAAAk",
+					"AQAAAAAAAAABAAAA6gMAAAAAAADqAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					23,
+					1,
+					"insert",
+					{
+						"characters": "cl"
+					},
+					"AgAAAAAEAAAAAAAAAQQAAAAAAAAAAAAAAQQAAAAAAAACBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					24,
+					1,
+					"insert_completion",
+					{
+						"completion": "lsp_select_completion_item {\"session_name\":\"clangd\",\"item\":{\"label\":\" clearerr(FILE *__stream)\",\"score\":0.8157530426979065,\"insertText\":\"clearerr(${1:FILE *__stream})\",\"detail\":\"void\",\"kind\":3,\"documentation\":{\"kind\":\"markdown\",\"value\":\"From `<stdio.h>`  \\nClear the error and EOF indicators for STREAM.\"},\"sortText\":\"40af2acfclearerr\",\"insertTextFormat\":2,\"textEdit\":{\"range\":{\"start\":{\"character\":1,\"line\":23},\"end\":{\"character\":3,\"line\":23}},\"newText\":\"clearerr(${1:FILE *__stream})\"},\"filterText\":\"clearerr\"}}",
+						"format": "command",
+						"keep_prefix": true,
+						"must_insert": false,
+						"query_change_id":
+						[
+							22,
+							23,
+							2
+						],
+						"trigger": "clearerr"
+					},
+					"AgAAAAAEAAAAAAAAAAQAAAAAAAACAAAAY2wABAAAAAAAABgEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAgQAAAAAAAACBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					25,
+					3,
+					"delete_word",
+					{
+						"forward": false
+					},
+					"AwAAAAkEAAAAAAAACQQAAAAAAAAOAAAARklMRSAqX19zdHJlYW0IBAAAAAAAAAgEAAAAAAAAAQAAACgABAAAAAAAAAAEAAAAAAAACAAAAGNsZWFyZXJy",
+					"AQAAAAAAAAABAAAACQQAAAAAAAAXBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					27,
+					1,
+					"left_delete",
+					null,
+					"AQAAAAAEAAAAAAAAAAQAAAAAAAABAAAAKQ",
+					"AQAAAAAAAAABAAAAAAQAAAAAAAABBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					28,
+					1,
+					"insert",
+					{
+						"characters": "clean"
+					},
+					"BQAAAAAEAAAAAAAAAQQAAAAAAAAAAAAAAQQAAAAAAAACBAAAAAAAAAAAAAACBAAAAAAAAAMEAAAAAAAAAAAAAAMEAAAAAAAABAQAAAAAAAAAAAAABAQAAAAAAAAFBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					29,
+					1,
+					"insert_completion",
+					{
+						"completion": "lsp_select_completion_item {\"session_name\":\"clangd\",\"item\":{\"label\":\" clean_pipes()\",\"insertText\":\"clean_pipes()\",\"detail\":\"void\",\"kind\":3,\"score\":6.600000381469727,\"sortText\":\"3f2cccccclean_pipes\",\"insertTextFormat\":2,\"textEdit\":{\"range\":{\"start\":{\"character\":1,\"line\":23},\"end\":{\"character\":6,\"line\":23}},\"newText\":\"clean_pipes()\"},\"filterText\":\"clean_pipes\"}}",
+						"format": "command",
+						"keep_prefix": true,
+						"must_insert": false,
+						"query_change_id":
+						[
+							27,
+							28,
+							5
+						],
+						"trigger": "clean_pipes"
+					},
+					"AgAAAAAEAAAAAAAAAAQAAAAAAAAFAAAAY2xlYW4ABAAAAAAAAA0EAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAABQQAAAAAAAAFBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					30,
+					1,
+					"append_semi_colon",
+					null,
+					"AQAAAA0EAAAAAAAADgQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAADQQAAAAAAAANBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					32,
+					1,
+					"left_delete",
+					null,
+					"AQAAALcDAAAAAAAAtwMAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAuAMAAAAAAAC4AwAAAAAAAAAAAAAAQG1A"
+				],
+				[
+					33,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAALcDAAAAAAAAuAMAAAAAAAAAAAAAuAMAAAAAAAC5AwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtwMAAAAAAAC3AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					34,
+					1,
+					"insert",
+					{
+						"characters": "int"
+					},
+					"AwAAALkDAAAAAAAAugMAAAAAAAAAAAAAugMAAAAAAAC7AwAAAAAAAAAAAAC7AwAAAAAAALwDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAuQMAAAAAAAC5AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					35,
+					1,
+					"insert",
+					{
+						"characters": " fd"
+					},
+					"AwAAALwDAAAAAAAAvQMAAAAAAAAAAAAAvQMAAAAAAAC+AwAAAAAAAAAAAAC+AwAAAAAAAL8DAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvAMAAAAAAAC8AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					36,
+					1,
+					"insert_snippet",
+					{
+						"contents": "[$0]"
+					},
+					"AQAAAL8DAAAAAAAAwQMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvwMAAAAAAAC/AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					37,
+					1,
+					"insert",
+					{
+						"characters": "2"
+					},
+					"AQAAAMADAAAAAAAAwQMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAwAMAAAAAAADAAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					39,
+					1,
+					"insert",
+					{
+						"characters": ";"
+					},
+					"AQAAAMIDAAAAAAAAwwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAwgMAAAAAAADCAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					40,
+					1,
+					"insert",
+					{
+						"characters": "\nint"
+					},
+					"BQAAAMMDAAAAAAAAxAMAAAAAAAAAAAAAxAMAAAAAAADFAwAAAAAAAAAAAADFAwAAAAAAAMYDAAAAAAAAAAAAAMYDAAAAAAAAxwMAAAAAAAAAAAAAxwMAAAAAAADIAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAwwMAAAAAAADDAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					41,
+					1,
+					"insert",
+					{
+						"characters": " result"
+					},
+					"BwAAAMgDAAAAAAAAyQMAAAAAAAAAAAAAyQMAAAAAAADKAwAAAAAAAAAAAADKAwAAAAAAAMsDAAAAAAAAAAAAAMsDAAAAAAAAzAMAAAAAAAAAAAAAzAMAAAAAAADNAwAAAAAAAAAAAADNAwAAAAAAAM4DAAAAAAAAAAAAAM4DAAAAAAAAzwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAyAMAAAAAAADIAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					42,
+					1,
+					"insert",
+					{
+						"characters": " ="
+					},
+					"AgAAAM8DAAAAAAAA0AMAAAAAAAAAAAAA0AMAAAAAAADRAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzwMAAAAAAADPAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					43,
+					1,
+					"insert",
+					{
+						"characters": " pipe"
+					},
+					"BQAAANEDAAAAAAAA0gMAAAAAAAAAAAAA0gMAAAAAAADTAwAAAAAAAAAAAADTAwAAAAAAANQDAAAAAAAAAAAAANQDAAAAAAAA1QMAAAAAAAAAAAAA1QMAAAAAAADWAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA0QMAAAAAAADRAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					44,
+					1,
+					"insert_snippet",
+					{
+						"contents": "($0)"
+					},
+					"AQAAANYDAAAAAAAA2AMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA1gMAAAAAAADWAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					45,
+					1,
+					"append_semi_colon",
+					null,
+					"AQAAANgDAAAAAAAA2QMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA1wMAAAAAAADXAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					46,
+					1,
+					"insert",
+					{
+						"characters": "fd"
+					},
+					"AgAAANcDAAAAAAAA2AMAAAAAAAAAAAAA2AMAAAAAAADZAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA1wMAAAAAAADXAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					48,
+					1,
+					"insert",
+					{
+						"characters": "\npf"
+					},
+					"BAAAANsDAAAAAAAA3AMAAAAAAAAAAAAA3AMAAAAAAADdAwAAAAAAAAAAAADdAwAAAAAAAN4DAAAAAAAAAAAAAN4DAAAAAAAA3wMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA2wMAAAAAAADbAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					49,
+					1,
+					"insert_completion",
+					{
+						"completion": "printf(\"${1:%s}\\n\", ${2})",
+						"format": "snippet",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "pf"
+					},
+					"AgAAAN0DAAAAAAAA3QMAAAAAAAACAAAAcGbdAwAAAAAAAO0DAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA3wMAAAAAAADfAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					51,
+					1,
+					"insert",
+					{
+						"characters": "result"
+					},
+					"BgAAAOwDAAAAAAAA7QMAAAAAAAAAAAAA7QMAAAAAAADuAwAAAAAAAAAAAADuAwAAAAAAAO8DAAAAAAAAAAAAAO8DAAAAAAAA8AMAAAAAAAAAAAAA8AMAAAAAAADxAwAAAAAAAAAAAADxAwAAAAAAAPIDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA7AMAAAAAAADsAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					52,
+					1,
+					"append_semi_colon",
+					null,
+					"AQAAAPMDAAAAAAAA9AMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA8gMAAAAAAADyAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					54,
+					1,
+					"insert",
+					{
+						"characters": "%d"
+					},
+					"AwAAAOUDAAAAAAAA5gMAAAAAAAAAAAAA5gMAAAAAAADmAwAAAAAAAAIAAAAlc+YDAAAAAAAA5wMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA5QMAAAAAAADnAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					59,
+					1,
+					"insert",
+					{
+						"characters": "\n#include"
+					},
+					"CQAAAI4DAAAAAAAAjwMAAAAAAAAAAAAAjwMAAAAAAACQAwAAAAAAAAAAAACQAwAAAAAAAJEDAAAAAAAAAAAAAJEDAAAAAAAAkgMAAAAAAAAAAAAAkgMAAAAAAACTAwAAAAAAAAAAAACTAwAAAAAAAJQDAAAAAAAAAAAAAJQDAAAAAAAAlQMAAAAAAAAAAAAAlQMAAAAAAACWAwAAAAAAAAAAAACWAwAAAAAAAJcDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjgMAAAAAAACOAwAAAAAAAAAAAAAAQG1A"
+				],
+				[
+					60,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAJcDAAAAAAAAmAMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlwMAAAAAAACXAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					61,
+					1,
+					"insert_snippet",
+					{
+						"contents": "<$0>"
+					},
+					"AQAAAJgDAAAAAAAAmgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAmAMAAAAAAACYAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					62,
+					1,
+					"insert",
+					{
+						"characters": "unistd.h"
+					},
+					"CAAAAJkDAAAAAAAAmgMAAAAAAAAAAAAAmgMAAAAAAACbAwAAAAAAAAAAAACbAwAAAAAAAJwDAAAAAAAAAAAAAJwDAAAAAAAAnQMAAAAAAAAAAAAAnQMAAAAAAACeAwAAAAAAAAAAAACeAwAAAAAAAJ8DAAAAAAAAAAAAAJ8DAAAAAAAAoAMAAAAAAAAAAAAAoAMAAAAAAAChAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAmQMAAAAAAACZAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					68,
+					1,
+					"insert",
+					{
+						"characters": "\npf"
+					},
+					"BAAAAAgEAAAAAAAACQQAAAAAAAAAAAAACQQAAAAAAAAKBAAAAAAAAAAAAAAKBAAAAAAAAAsEAAAAAAAAAAAAAAsEAAAAAAAADAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAACAQAAAAAAAAIBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					69,
+					1,
+					"insert_completion",
+					{
+						"completion": "printf(\"${1:%s}\\n\", ${2})",
+						"format": "snippet",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "pf"
+					},
+					"AgAAAAoEAAAAAAAACgQAAAAAAAACAAAAcGYKBAAAAAAAABoEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAADAQAAAAAAAAMBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					70,
+					1,
+					"cut",
+					null,
+					"AQAAABIEAAAAAAAAEgQAAAAAAAACAAAAJXM",
+					"AQAAAAAAAAABAAAAEgQAAAAAAAAUBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					73,
+					2,
+					"left_delete",
+					null,
+					"AgAAAAkEAAAAAAAACQQAAAAAAAAPAAAACXByaW50ZigiXG4iLCApCAQAAAAAAAAIBAAAAAAAAAEAAAAK",
+					"AQAAAAAAAAABAAAAGAQAAAAAAAAJBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					78,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAFAEAAAAAAAAUwQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAXgQAAAAAAABeBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					79,
+					1,
+					"run_macro_file",
+					{
+						"file": "res://Packages/Default/Add Line.sublime-macro"
+					},
+					"AgAAAGEEAAAAAAAAYgQAAAAAAAAAAAAAYgQAAAAAAABjBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAYQQAAAAAAABhBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					80,
+					1,
+					"insert",
+					{
+						"characters": "perrer"
+					},
+					"BgAAAGMEAAAAAAAAZAQAAAAAAAAAAAAAZAQAAAAAAABlBAAAAAAAAAAAAABlBAAAAAAAAGYEAAAAAAAAAAAAAGYEAAAAAAAAZwQAAAAAAAAAAAAAZwQAAAAAAABoBAAAAAAAAAAAAABoBAAAAAAAAGkEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAYwQAAAAAAABjBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					81,
+					1,
+					"insert_snippet",
+					{
+						"contents": "($0)"
+					},
+					"AQAAAGkEAAAAAAAAawQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAaQQAAAAAAABpBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					82,
+					1,
+					"insert_snippet",
+					{
+						"contents": "\"$0\""
+					},
+					"AQAAAGoEAAAAAAAAbAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAagQAAAAAAABqBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					83,
+					1,
+					"insert",
+					{
+						"characters": "I'm"
+					},
+					"AwAAAGsEAAAAAAAAbAQAAAAAAAAAAAAAbAQAAAAAAABtBAAAAAAAAAAAAABtBAAAAAAAAG4EAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAawQAAAAAAABrBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					84,
+					1,
+					"insert",
+					{
+						"characters": " an"
+					},
+					"AwAAAG4EAAAAAAAAbwQAAAAAAAAAAAAAbwQAAAAAAABwBAAAAAAAAAAAAABwBAAAAAAAAHEEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbgQAAAAAAABuBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					85,
+					1,
+					"insert",
+					{
+						"characters": " error!"
+					},
+					"BwAAAHEEAAAAAAAAcgQAAAAAAAAAAAAAcgQAAAAAAABzBAAAAAAAAAAAAABzBAAAAAAAAHQEAAAAAAAAAAAAAHQEAAAAAAAAdQQAAAAAAAAAAAAAdQQAAAAAAAB2BAAAAAAAAAAAAAB2BAAAAAAAAHcEAAAAAAAAAAAAAHcEAAAAAAAAeAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcQQAAAAAAABxBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					87,
+					1,
+					"insert",
+					{
+						"characters": ";"
+					},
+					"AQAAAHoEAAAAAAAAewQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAegQAAAAAAAB6BAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					90,
+					1,
+					"left_delete",
+					null,
+					"AQAAAGcEAAAAAAAAZwQAAAAAAAABAAAAZQ",
+					"AQAAAAAAAAABAAAAaAQAAAAAAABoBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					91,
+					1,
+					"insert",
+					{
+						"characters": "o"
+					},
+					"AQAAAGcEAAAAAAAAaAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAZwQAAAAAAABnBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					96,
+					1,
+					"insert",
+					{
+						"characters": "\\n"
+					},
+					"AgAAAHgEAAAAAAAAeQQAAAAAAAAAAAAAeQQAAAAAAAB6BAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAeAQAAAAAAAB4BAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					97,
+					1,
+					"cut",
+					null,
+					"AQAAAGIEAAAAAAAAYgQAAAAAAAAcAAAACXBlcnJvcigiSSdtIGFuIGVycm9yIVxuIik7Cg",
+					"AQAAAAAAAAABAAAAegQAAAAAAAB6BAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					100,
+					1,
+					"insert",
+					{
+						"characters": "\nint"
+					},
+					"BQAAAGEEAAAAAAAAYgQAAAAAAAAAAAAAYgQAAAAAAABjBAAAAAAAAAAAAABjBAAAAAAAAGQEAAAAAAAAAAAAAGQEAAAAAAAAZQQAAAAAAAAAAAAAZQQAAAAAAABmBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAYQQAAAAAAABhBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					101,
+					1,
+					"insert",
+					{
+						"characters": " wat"
+					},
+					"BAAAAGYEAAAAAAAAZwQAAAAAAAAAAAAAZwQAAAAAAABoBAAAAAAAAAAAAABoBAAAAAAAAGkEAAAAAAAAAAAAAGkEAAAAAAAAagQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAZgQAAAAAAABmBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					102,
+					1,
+					"insert",
+					{
+						"characters": " ="
+					},
+					"AgAAAGoEAAAAAAAAawQAAAAAAAAAAAAAawQAAAAAAABsBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAagQAAAAAAABqBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					103,
+					1,
+					"insert",
+					{
+						"characters": " str"
+					},
+					"BAAAAGwEAAAAAAAAbQQAAAAAAAAAAAAAbQQAAAAAAABuBAAAAAAAAAAAAABuBAAAAAAAAG8EAAAAAAAAAAAAAG8EAAAAAAAAcAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbAQAAAAAAABsBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					104,
+					1,
+					"delete_word",
+					{
+						"forward": false
+					},
+					"AQAAAG0EAAAAAAAAbQQAAAAAAAADAAAAc3Ry",
+					"AQAAAAAAAAABAAAAcAQAAAAAAABwBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					105,
+					1,
+					"insert",
+					{
+						"characters": "srt"
+					},
+					"AwAAAG0EAAAAAAAAbgQAAAAAAAAAAAAAbgQAAAAAAABvBAAAAAAAAAAAAABvBAAAAAAAAHAEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbQQAAAAAAABtBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					106,
+					3,
+					"left_delete",
+					null,
+					"AwAAAG8EAAAAAAAAbwQAAAAAAAABAAAAdG4EAAAAAAAAbgQAAAAAAAABAAAAcm0EAAAAAAAAbQQAAAAAAAABAAAAcw",
+					"AQAAAAAAAAABAAAAcAQAAAAAAABwBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					109,
+					1,
+					"insert",
+					{
+						"characters": "\n#include"
+					},
+					"CQAAALUDAAAAAAAAtgMAAAAAAAAAAAAAtgMAAAAAAAC3AwAAAAAAAAAAAAC3AwAAAAAAALgDAAAAAAAAAAAAALgDAAAAAAAAuQMAAAAAAAAAAAAAuQMAAAAAAAC6AwAAAAAAAAAAAAC6AwAAAAAAALsDAAAAAAAAAAAAALsDAAAAAAAAvAMAAAAAAAAAAAAAvAMAAAAAAAC9AwAAAAAAAAAAAAC9AwAAAAAAAL4DAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtQMAAAAAAAC1AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					110,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAL4DAAAAAAAAvwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvgMAAAAAAAC+AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					111,
+					1,
+					"insert_snippet",
+					{
+						"contents": "<$0>"
+					},
+					"AQAAAL8DAAAAAAAAwQMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvwMAAAAAAAC/AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					112,
+					1,
+					"insert",
+					{
+						"characters": "stdlib.h"
+					},
+					"CAAAAMADAAAAAAAAwQMAAAAAAAAAAAAAwQMAAAAAAADCAwAAAAAAAAAAAADCAwAAAAAAAMMDAAAAAAAAAAAAAMMDAAAAAAAAxAMAAAAAAAAAAAAAxAMAAAAAAADFAwAAAAAAAAAAAADFAwAAAAAAAMYDAAAAAAAAAAAAAMYDAAAAAAAAxwMAAAAAAAAAAAAAxwMAAAAAAADIAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAwAMAAAAAAADAAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					115,
+					1,
+					"insert",
+					{
+						"characters": "strtol"
+					},
+					"BgAAAIEEAAAAAAAAggQAAAAAAAAAAAAAggQAAAAAAACDBAAAAAAAAAAAAACDBAAAAAAAAIQEAAAAAAAAAAAAAIQEAAAAAAAAhQQAAAAAAAAAAAAAhQQAAAAAAACGBAAAAAAAAAAAAACGBAAAAAAAAIcEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgQQAAAAAAACBBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					116,
+					1,
+					"insert_snippet",
+					{
+						"contents": "($0)"
+					},
+					"AQAAAIcEAAAAAAAAiQQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhwQAAAAAAACHBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					117,
+					1,
+					"insert_snippet",
+					{
+						"contents": "\"$0\""
+					},
+					"AQAAAIgEAAAAAAAAigQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAiAQAAAAAAACIBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					118,
+					1,
+					"insert",
+					{
+						"characters": "999999999999999999999999999999999999"
+					},
+					"JAAAAIkEAAAAAAAAigQAAAAAAAAAAAAAigQAAAAAAACLBAAAAAAAAAAAAACLBAAAAAAAAIwEAAAAAAAAAAAAAIwEAAAAAAAAjQQAAAAAAAAAAAAAjQQAAAAAAACOBAAAAAAAAAAAAACOBAAAAAAAAI8EAAAAAAAAAAAAAI8EAAAAAAAAkAQAAAAAAAAAAAAAkAQAAAAAAACRBAAAAAAAAAAAAACRBAAAAAAAAJIEAAAAAAAAAAAAAJIEAAAAAAAAkwQAAAAAAAAAAAAAkwQAAAAAAACUBAAAAAAAAAAAAACUBAAAAAAAAJUEAAAAAAAAAAAAAJUEAAAAAAAAlgQAAAAAAAAAAAAAlgQAAAAAAACXBAAAAAAAAAAAAACXBAAAAAAAAJgEAAAAAAAAAAAAAJgEAAAAAAAAmQQAAAAAAAAAAAAAmQQAAAAAAACaBAAAAAAAAAAAAACaBAAAAAAAAJsEAAAAAAAAAAAAAJsEAAAAAAAAnAQAAAAAAAAAAAAAnAQAAAAAAACdBAAAAAAAAAAAAACdBAAAAAAAAJ4EAAAAAAAAAAAAAJ4EAAAAAAAAnwQAAAAAAAAAAAAAnwQAAAAAAACgBAAAAAAAAAAAAACgBAAAAAAAAKEEAAAAAAAAAAAAAKEEAAAAAAAAogQAAAAAAAAAAAAAogQAAAAAAACjBAAAAAAAAAAAAACjBAAAAAAAAKQEAAAAAAAAAAAAAKQEAAAAAAAApQQAAAAAAAAAAAAApQQAAAAAAACmBAAAAAAAAAAAAACmBAAAAAAAAKcEAAAAAAAAAAAAAKcEAAAAAAAAqAQAAAAAAAAAAAAAqAQAAAAAAACpBAAAAAAAAAAAAACpBAAAAAAAAKoEAAAAAAAAAAAAAKoEAAAAAAAAqwQAAAAAAAAAAAAAqwQAAAAAAACsBAAAAAAAAAAAAACsBAAAAAAAAK0EAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAiQQAAAAAAACJBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					119,
+					1,
+					"insert",
+					{
+						"characters": "9999999999999999999999999"
+					},
+					"GQAAAK0EAAAAAAAArgQAAAAAAAAAAAAArgQAAAAAAACvBAAAAAAAAAAAAACvBAAAAAAAALAEAAAAAAAAAAAAALAEAAAAAAAAsQQAAAAAAAAAAAAAsQQAAAAAAACyBAAAAAAAAAAAAACyBAAAAAAAALMEAAAAAAAAAAAAALMEAAAAAAAAtAQAAAAAAAAAAAAAtAQAAAAAAAC1BAAAAAAAAAAAAAC1BAAAAAAAALYEAAAAAAAAAAAAALYEAAAAAAAAtwQAAAAAAAAAAAAAtwQAAAAAAAC4BAAAAAAAAAAAAAC4BAAAAAAAALkEAAAAAAAAAAAAALkEAAAAAAAAugQAAAAAAAAAAAAAugQAAAAAAAC7BAAAAAAAAAAAAAC7BAAAAAAAALwEAAAAAAAAAAAAALwEAAAAAAAAvQQAAAAAAAAAAAAAvQQAAAAAAAC+BAAAAAAAAAAAAAC+BAAAAAAAAL8EAAAAAAAAAAAAAL8EAAAAAAAAwAQAAAAAAAAAAAAAwAQAAAAAAADBBAAAAAAAAAAAAADBBAAAAAAAAMIEAAAAAAAAAAAAAMIEAAAAAAAAwwQAAAAAAAAAAAAAwwQAAAAAAADEBAAAAAAAAAAAAADEBAAAAAAAAMUEAAAAAAAAAAAAAMUEAAAAAAAAxgQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAArQQAAAAAAACtBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					121,
+					1,
+					"insert",
+					{
+						"characters": ";"
+					},
+					"AQAAAMgEAAAAAAAAyQQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAyAQAAAAAAADIBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					122,
+					1,
+					"insert",
+					{
+						"characters": "\nperror"
+					},
+					"CAAAAMkEAAAAAAAAygQAAAAAAAAAAAAAygQAAAAAAADLBAAAAAAAAAAAAADLBAAAAAAAAMwEAAAAAAAAAAAAAMwEAAAAAAAAzQQAAAAAAAAAAAAAzQQAAAAAAADOBAAAAAAAAAAAAADOBAAAAAAAAM8EAAAAAAAAAAAAAM8EAAAAAAAA0AQAAAAAAAAAAAAA0AQAAAAAAADRBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAyQQAAAAAAADJBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					123,
+					1,
+					"insert_snippet",
+					{
+						"contents": "($0)"
+					},
+					"AQAAANEEAAAAAAAA0wQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA0QQAAAAAAADRBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					124,
+					1,
+					"insert_snippet",
+					{
+						"contents": "\"$0\""
+					},
+					"AQAAANIEAAAAAAAA1AQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA0gQAAAAAAADSBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					125,
+					1,
+					"insert",
+					{
+						"characters": "oopsie"
+					},
+					"BgAAANMEAAAAAAAA1AQAAAAAAAAAAAAA1AQAAAAAAADVBAAAAAAAAAAAAADVBAAAAAAAANYEAAAAAAAAAAAAANYEAAAAAAAA1wQAAAAAAAAAAAAA1wQAAAAAAADYBAAAAAAAAAAAAADYBAAAAAAAANkEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA0wQAAAAAAADTBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					126,
+					1,
+					"insert",
+					{
+						"characters": "!\\n"
+					},
+					"AwAAANkEAAAAAAAA2gQAAAAAAAAAAAAA2gQAAAAAAADbBAAAAAAAAAAAAADbBAAAAAAAANwEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA2QQAAAAAAADZBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					128,
+					1,
+					"insert",
+					{
+						"characters": ";"
+					},
+					"AQAAAN4EAAAAAAAA3wQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA3gQAAAAAAADeBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					135,
+					1,
+					"insert",
+					{
+						"characters": "strtonum"
+					},
+					"CQAAAIEEAAAAAAAAggQAAAAAAAAAAAAAggQAAAAAAACCBAAAAAAAAAYAAABzdHJ0b2yCBAAAAAAAAIMEAAAAAAAAAAAAAIMEAAAAAAAAhAQAAAAAAAAAAAAAhAQAAAAAAACFBAAAAAAAAAAAAACFBAAAAAAAAIYEAAAAAAAAAAAAAIYEAAAAAAAAhwQAAAAAAAAAAAAAhwQAAAAAAACIBAAAAAAAAAAAAACIBAAAAAAAAIkEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgQQAAAAAAACHBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					139,
+					1,
+					"insert",
+					{
+						"characters": "\n#include"
+					},
+					"CQAAAMkDAAAAAAAAygMAAAAAAAAAAAAAygMAAAAAAADLAwAAAAAAAAAAAADLAwAAAAAAAMwDAAAAAAAAAAAAAMwDAAAAAAAAzQMAAAAAAAAAAAAAzQMAAAAAAADOAwAAAAAAAAAAAADOAwAAAAAAAM8DAAAAAAAAAAAAAM8DAAAAAAAA0AMAAAAAAAAAAAAA0AMAAAAAAADRAwAAAAAAAAAAAADRAwAAAAAAANIDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAyQMAAAAAAADJAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					140,
+					1,
+					"insert",
+					{
+						"characters": " L"
+					},
+					"AgAAANIDAAAAAAAA0wMAAAAAAAAAAAAA0wMAAAAAAADUAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA0gMAAAAAAADSAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					141,
+					1,
+					"left_delete",
+					null,
+					"AQAAANMDAAAAAAAA0wMAAAAAAAABAAAATA",
+					"AQAAAAAAAAABAAAA1AMAAAAAAADUAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					142,
+					1,
+					"insert_snippet",
+					{
+						"contents": "<$0>"
+					},
+					"AQAAANMDAAAAAAAA1QMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA0wMAAAAAAADTAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					143,
+					1,
+					"insert",
+					{
+						"characters": "limits.h"
+					},
+					"CAAAANQDAAAAAAAA1QMAAAAAAAAAAAAA1QMAAAAAAADWAwAAAAAAAAAAAADWAwAAAAAAANcDAAAAAAAAAAAAANcDAAAAAAAA2AMAAAAAAAAAAAAA2AMAAAAAAADZAwAAAAAAAAAAAADZAwAAAAAAANoDAAAAAAAAAAAAANoDAAAAAAAA2wMAAAAAAAAAAAAA2wMAAAAAAADcAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA1AMAAAAAAADUAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					144,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAMoDAAAAAAAAzQMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA3AMAAAAAAADcAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					154,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAIwEAAAAAAAAjQQAAAAAAAAAAAAAjQQAAAAAAACOBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjAQAAAAAAACMBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					155,
+					1,
+					"paste",
+					null,
+					"AQAAAI4EAAAAAAAAlgQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjgQAAAAAAACOBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					158,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"AQAAAI4EAAAAAAAAkQQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlgQAAAAAAACWBAAAAAAAAAAAAAAAgGNA"
+				],
+				[
+					162,
+					1,
+					"paste",
+					null,
+					"AgAAAKUEAAAAAAAArQQAAAAAAAAAAAAArQQAAAAAAACtBAAAAAAAAAgAAABzdHJ0b251bQ",
+					"AQAAAAAAAAABAAAApQQAAAAAAACtBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					178,
+					1,
+					"insert",
+					{
+						"characters": "strtol"
+					},
+					"BwAAAKUEAAAAAAAApgQAAAAAAAAAAAAApgQAAAAAAACmBAAAAAAAAAgAAABzdHJ0b251baYEAAAAAAAApwQAAAAAAAAAAAAApwQAAAAAAACoBAAAAAAAAAAAAACoBAAAAAAAAKkEAAAAAAAAAAAAAKkEAAAAAAAAqgQAAAAAAAAAAAAAqgQAAAAAAACrBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAApQQAAAAAAACtBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					188,
+					1,
+					"left_delete",
+					null,
+					"AQAAAJkEAAAAAAAAmQQAAAAAAABUAAAACglpbnQgd2F0ID0gc3RydG9sKCI5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5Iik7",
+					"AQAAAAAAAAABAAAA7QQAAAAAAACZBAAAAAAAAAAAAAAAeJFA"
+				],
+				[
+					190,
+					1,
+					"cut",
+					null,
+					"AQAAAJoEAAAAAAAAmgQAAAAAAAAWAAAACXBlcnJvcigib29wc2llIVxuIik7Cg",
+					"AQAAAAAAAAABAAAApgQAAAAAAACmBAAAAAAAAAAAAAAAYGhA"
+				],
+				[
+					192,
+					1,
+					"cut",
+					null,
+					"AQAAAI0EAAAAAAAAjQQAAAAAAAANAAAACS8vIHN0cnRvbnVtCg",
+					"AQAAAAAAAAABAAAAmQQAAAAAAACZBAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "/home/psharen/Documents/projects/school21/42curcus/other/examples/pipe_example.c",
+			"settings":
+			{
+				"buffer_size": 1021,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					1,
+					1,
+					"paste",
+					null,
+					"AQAAAAAAAAAAAAAAhgUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					2,
+					1,
+					"astyleformat",
+					null,
+					"MAAAABcAAAAAAAAAFwAAAAAAAAAHAAAAICAgICAgIC0AAAAAAAAALQAAAAAAAAAHAAAAICAgICAgIEAAAAAAAAAAQAAAAAAAAAAHAAAAICAgICAgIFQAAAAAAAAAVAAAAAAAAAAHAAAAICAgICAgIGgAAAAAAAAAaAAAAAAAAAAHAAAAICAgICAgIH0AAAAAAAAAfQAAAAAAAAAHAAAAICAgICAgIIEAAAAAAAAAgQAAAAAAAAAHAAAAICAgICAgIJ4AAAAAAAAAngAAAAAAAAAHAAAAICAgICAgIKAAAAAAAAAAoAAAAAAAAAAHAAAAICAgICAgILcAAAAAAAAAtwAAAAAAAAAHAAAAICAgICAgIMcAAAAAAAAAxwAAAAAAAAAHAAAAICAgICAgINIAAAAAAAAA0gAAAAAAAAAHAAAAICAgICAgIOcAAAAAAAAA5wAAAAAAAAACAAAAICDvAAAAAAAAAO8AAAAAAAAABQAAACAgICAgKQEAAAAAAAApAQAAAAAAAAcAAAAgICAgICAgQQEAAAAAAABBAQAAAAAAAAcAAAAgICAgICAgRAEAAAAAAABEAQAAAAAAAAcAAAAgICAgICAgagEAAAAAAABqAQAAAAAAAAcAAAAgICAgICAgegEAAAAAAAB6AQAAAAAAAAEAAAAgggEAAAAAAACCAQAAAAAAAAYAAAAgICAgICCaAQAAAAAAAJoBAAAAAAAABwAAACAgICAgICChAQAAAAAAAKEBAAAAAAAABwAAACAgICAgICC0AQAAAAAAALQBAAAAAAAABwAAACAgICAgICDGAQAAAAAAAMYBAAAAAAAABwAAACAgICAgICDmAQAAAAAAAOYBAAAAAAAABwAAACAgICAgICD+AQAAAAAAAP4BAAAAAAAABwAAACAgICAgICABAgAAAAAAAAECAAAAAAAABwAAACAgICAgICA1AgAAAAAAADUCAAAAAAAABwAAACAgICAgICB2AgAAAAAAAHYCAAAAAAAABgAAACAgICAgIH4CAAAAAAAAfgIAAAAAAAABAAAAIK8CAAAAAAAArwIAAAAAAAAHAAAAICAgICAgIM8CAAAAAAAAzwIAAAAAAAABAAAAINcCAAAAAAAA1wIAAAAAAAAGAAAAICAgICAg9gIAAAAAAAD2AgAAAAAAAAIAAAAgIP4CAAAAAAAA/gIAAAAAAAAFAAAAICAgICAQAwAAAAAAABADAAAAAAAABAAAACAgICAYAwAAAAAAABgDAAAAAAAAAwAAACAgIDIDAAAAAAAAMgMAAAAAAAAHAAAAICAgICAgIGoDAAAAAAAAagMAAAAAAAAHAAAAICAgICAgILEDAAAAAAAAsQMAAAAAAAAHAAAAICAgICAgIN0DAAAAAAAA3QMAAAAAAAABAAAAIOUDAAAAAAAA5QMAAAAAAAAGAAAAICAgICAgGgQAAAAAAAAaBAAAAAAAAAMAAAAgICAiBAAAAAAAACIEAAAAAAAABAAAACAgICBSBAAAAAAAAFIEAAAAAAAABAAAACAgICBaBAAAAAAAAFoEAAAAAAAAAwAAACAgIHIEAAAAAAAAcgQAAAAAAAAHAAAAICAgICAgIHQEAAAAAAAAdAQAAAAAAAAHAAAAICAgICAgIA",
+					"AQAAAAAAAAABAAAAhgUAAAAAAACGBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					3,
+					1,
+					"unexpand_tabs",
+					{
+						"set_translate_tabs": true
+					},
+					"AQAAAAAAAAAAAAAA5QMAAAAAAAB1BAAAI2luY2x1ZGUgPHN5cy90eXBlcy5oPgojaW5jbHVkZSA8c3lzL3dhaXQuaD4KI2luY2x1ZGUgPHN0ZGlvLmg+CiNpbmNsdWRlIDxzdGRsaWIuaD4KI2luY2x1ZGUgPHVuaXN0ZC5oPgojaW5jbHVkZSA8c3RyaW5nLmg+CgppbnQKbWFpbihpbnQgYXJnYywgY2hhciAqYXJndltdKQp7CiAgICBpbnQgcGlwZWZkWzJdOwogICAgcGlkX3QgY3BpZDsKICAgIGNoYXIgYnVmOwoKICAgIGlmIChhcmdjICE9IDIpIHsKICAgICAgICBmcHJpbnRmKHN0ZGVyciwgIlVzYWdlOiAlcyA8c3RyaW5nPlxuIiwgYXJndlswXSk7CiAgICAgICAgZXhpdChFWElUX0ZBSUxVUkUpOwogICAgfQoKICAgIGlmIChwaXBlKHBpcGVmZCkgPT0gLTEpIHsKICAgICAgICBwZXJyb3IoInBpcGUiKTsKICAgICAgICBleGl0KEVYSVRfRkFJTFVSRSk7CiAgICB9CgogICAgY3BpZCA9IGZvcmsoKTsKICAgIGlmIChjcGlkID09IC0xKSB7CiAgICAgICAgcGVycm9yKCJmb3JrIik7CiAgICAgICAgZXhpdChFWElUX0ZBSUxVUkUpOwogICAgfQoKICAgIGlmIChjcGlkID09IDApIHsgICAgLyogQ2hpbGQgcmVhZHMgZnJvbSBwaXBlICovCiAgICAgICAgY2xvc2UocGlwZWZkWzFdKTsgICAgICAgICAgLyogQ2xvc2UgdW51c2VkIHdyaXRlIGVuZCAqLwoKICAgICAgICB3aGlsZSAocmVhZChwaXBlZmRbMF0sICZidWYsIDEpID4gMCkKICAgICAgICAgICAgd3JpdGUoU1RET1VUX0ZJTEVOTywgJmJ1ZiwgMSk7CgogICAgICAgIHdyaXRlKFNURE9VVF9GSUxFTk8sICJcbiIsIDEpOwogICAgICAgIGNsb3NlKHBpcGVmZFswXSk7CiAgICAgICAgX2V4aXQoRVhJVF9TVUNDRVNTKTsKCiAgICB9IGVsc2UgeyAgICAgICAgICAgIC8qIFBhcmVudCB3cml0ZXMgYXJndlsxXSB0byBwaXBlICovCiAgICAgICAgY2xvc2UocGlwZWZkWzBdKTsgICAgICAgICAgLyogQ2xvc2UgdW51c2VkIHJlYWQgZW5kICovCiAgICAgICAgd3JpdGUocGlwZWZkWzFdLCBhcmd2WzFdLCBzdHJsZW4oYXJndlsxXSkpOwogICAgICAgIGNsb3NlKHBpcGVmZFsxXSk7ICAgICAgICAgIC8qIFJlYWRlciB3aWxsIHNlZSBFT0YgKi8KICAgICAgICB3YWl0KE5VTEwpOyAgICAgICAgICAgICAgICAvKiBXYWl0IGZvciBjaGlsZCAqLwogICAgICAgIGV4aXQoRVhJVF9TVUNDRVNTKTsKICAgIH0KfQ",
+					"AQAAAAAAAAABAAAAdQQAAAAAAAB1BAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					4,
+					1,
+					"insert",
+					{
+						"characters": "\t"
+					},
+					"AQAAAOUDAAAAAAAA5gMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA5QMAAAAAAADlAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					5,
+					1,
+					"left_delete",
+					null,
+					"AQAAAOUDAAAAAAAA5QMAAAAAAAABAAAACQ",
+					"AQAAAAAAAAABAAAA5gMAAAAAAADmAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					179,
+					1,
+					"insert",
+					{
+						"characters": "\npri"
+					},
+					"BgAAAPoCAAAAAAAA+wIAAAAAAAAAAAAA+wIAAAAAAAD8AgAAAAAAAAAAAAD8AgAAAAAAAP0CAAAAAAAAAAAAAP0CAAAAAAAA/gIAAAAAAAAAAAAA/gIAAAAAAAD/AgAAAAAAAAAAAAD/AgAAAAAAAAADAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA+gIAAAAAAAD6AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					180,
+					1,
+					"insert",
+					{
+						"characters": "tnf"
+					},
+					"AwAAAAADAAAAAAAAAQMAAAAAAAAAAAAAAQMAAAAAAAACAwAAAAAAAAAAAAACAwAAAAAAAAMDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAMAAAAAAAAAAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					181,
+					1,
+					"insert_snippet",
+					{
+						"contents": "($0)"
+					},
+					"AQAAAAMDAAAAAAAABQMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAwMAAAAAAAADAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					182,
+					1,
+					"insert_snippet",
+					{
+						"contents": "\"$0\""
+					},
+					"AQAAAAQDAAAAAAAABgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAABAMAAAAAAAAEAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					183,
+					1,
+					"insert",
+					{
+						"characters": "%d\\n"
+					},
+					"BAAAAAUDAAAAAAAABgMAAAAAAAAAAAAABgMAAAAAAAAHAwAAAAAAAAAAAAAHAwAAAAAAAAgDAAAAAAAAAAAAAAgDAAAAAAAACQMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAABQMAAAAAAAAFAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					185,
+					1,
+					"insert",
+					{
+						"characters": ","
+					},
+					"AQAAAAoDAAAAAAAACwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAACgMAAAAAAAAKAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					186,
+					1,
+					"insert",
+					{
+						"characters": " s"
+					},
+					"AgAAAAsDAAAAAAAADAMAAAAAAAAAAAAADAMAAAAAAAANAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAACwMAAAAAAAALAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					187,
+					1,
+					"left_delete",
+					null,
+					"AQAAAAwDAAAAAAAADAMAAAAAAAABAAAAcw",
+					"AQAAAAAAAAABAAAADQMAAAAAAAANAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					188,
+					1,
+					"insert",
+					{
+						"characters": "cpid"
+					},
+					"BAAAAAwDAAAAAAAADQMAAAAAAAAAAAAADQMAAAAAAAAOAwAAAAAAAAAAAAAOAwAAAAAAAA8DAAAAAAAAAAAAAA8DAAAAAAAAEAMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAADAMAAAAAAAAMAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					189,
+					1,
+					"append_semi_colon",
+					null,
+					"AQAAABEDAAAAAAAAEgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAEAMAAAAAAAAQAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					207,
+					2,
+					"left_delete",
+					null,
+					"AgAAAAEDAAAAAAAAAQMAAAAAAAABAAAAbgADAAAAAAAAAAMAAAAAAAABAAAAdA",
+					"AQAAAAAAAAABAAAAAgMAAAAAAAACAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					208,
+					1,
+					"insert",
+					{
+						"characters": "nt"
+					},
+					"AgAAAAADAAAAAAAAAQMAAAAAAAAAAAAAAQMAAAAAAAACAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAMAAAAAAAAAAwAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "/usr/include/stdlib.h",
+			"settings":
+			{
+				"buffer_size": 36061,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/C++/C Single File.sublime-build",
+				"Run"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"tabs conve",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"convert tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"disabl",
+				"Package Control: Disable Package"
+			],
+			[
+				"debu",
+				"Debugger: Open"
+			],
+			[
+				"debug",
+				"Debugger: Quit"
+			],
+			[
+				"terminus",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"debugger sele",
+				"Debugger: Add or Select Configuration"
+			],
+			[
+				"de",
+				"Debugger: Open"
+			],
+			[
+				"debugger confi",
+				"Debugger: Add or Select Configuration"
+			],
+			[
+				"debugger add ",
+				"Debugger: Add or Select Configuration"
+			],
+			[
+				"debugger inst",
+				"Debugger: Install Adapters"
+			],
+			[
+				"debugger",
+				"Debugger: Clear Breakpoints"
+			],
+			[
+				"open",
+				"Debugger: Open"
+			],
+			[
+				"debugger run",
+				"Debugger: Run Task"
+			],
+			[
+				"debugger add confi",
+				"Debugger: Add or Select Configuration"
+			],
+			[
+				"debugger install",
+				"Debugger: Install Adapters"
+			],
+			[
+				"debugger adap",
+				"Debugger: Install Adapters"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"disable build",
+				"Disable/Enable buildview for this window"
+			],
+			[
+				"buildview",
+				"Disable/Enable buildview for this window"
+			],
+			[
+				"settinsg",
+				"Preferences: Settings"
+			],
+			[
+				"lsp settings",
+				"Preferences: LSP Settings"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"settings",
+				"Preferences: Settings"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"settings lsp",
+				"Preferences: LSP Settings"
+			],
+			[
+				"lsp",
+				"Preferences: LSP Settings"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings"
+			],
+			[
+				"build",
+				"Build: New Build System"
+			],
+			[
+				"expand",
+				"Selection: Expand"
+			],
+			[
+				"vpf",
+				"View Package File"
+			],
+			[
+				"lsp enable",
+				"LSP: Enable Language Server Globally"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"enabl",
+				"Package Control: Enable Package"
+			],
+			[
+				"linter settinsg",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"linter settings",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"switch",
+				"Profiles: Switch"
+			],
+			[
+				"single",
+				"Build With: C Single File - Run"
+			],
+			[
+				"terminus clo",
+				"Terminus: Close All"
+			],
+			[
+				"terminus panel",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"close terminus",
+				"Terminus: Close All"
+			],
+			[
+				"show",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"linter se",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"linter show",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"linter",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"terminus key",
+				"Preferences: Terminus Key Bindings"
+			],
+			[
+				"debugger insta",
+				"Debugger: Install Adapters"
+			],
+			[
+				"debugger ",
+				"Debugger: Add or Select Configuration"
+			],
+			[
+				"linterse",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"linte",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"sublime linter settings",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"di",
+				"Package Control: Disable Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"settigs",
+				"Preferences: Settings"
+			],
+			[
+				"linter settigs",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"settings linte",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"scheme",
+				"UI: Select Color Scheme"
+			],
+			[
+				"package list",
+				"Package Control: List Packages"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"l",
+				"Live Server: Stop"
+			],
+			[
+				"live",
+				"Live Server: Start"
+			],
+			[
+				"syntac css",
+				"Set Syntax: CSS"
+			],
+			[
+				"profile",
+				"Profiles: Switch"
+			],
+			[
+				"swi",
+				"Profiles: Switch"
+			],
+			[
+				"profil",
+				"Profiles: Rename"
+			],
+			[
+				"switc",
+				"Profiles: Switch"
+			],
+			[
+				"profiles",
+				"Profiles: Switch"
+			],
+			[
+				"prefere",
+				"Preferences: Settings"
+			],
+			[
+				"color scheme",
+				"UI: Select Color Scheme"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"set",
+				"Selection: Expand to Brackets"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 656.0,
+		"history":
+		[
+			"clear()",
+			"clear"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/psharen/Documents/projects/school21/42curcus/pipex",
+		"/home/psharen/Documents/projects/school21/42curcus/pipex/include",
+		"/home/psharen/Documents/projects/school21/42curcus/pipex/src"
+	],
+	"file_history":
+	[
+		"/usr/include/unistd.h",
+		"/usr/include/stdio.h",
+		"/home/psharen/Documents/projects/school21/42curcus/other/example",
+		"/home/psharen/Documents/projects/school21/42curcus/pipex/pipex.sublime-project",
+		"/home/psharen/Documents/projects/school21/42curcus/pipex/Makefile",
+		"/home/psharen/Documents/projects/school21/42curcus/pipex/src/strtol_example.c",
+		"/home/psharen/Documents/projects/school21/42curcus/pipex/src/pipe_example.c",
+		"/usr/include/x86_64-linux-gnu/sys/types.h",
+		"/usr/include/x86_64-linux-gnu/bits/types.h",
+		"/home/psharen/Documents/projects/school21/42curcus/other/gabcollet-pipex/libft/ft_memmove.c",
+		"/home/psharen/.zshrc",
+		"/home/psharen/Documents/projects/school21/42curcus/printf/.gitignore",
+		"/home/psharen/Documents/projects/school21/42curcus/printf/main.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx_hook.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx_loop.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx_destroy_display.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/src/float_parser.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/include/float_parser.h",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/libft/Makefile",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/libft/ft_strncmp.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/libft/ft_strcmp.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/fract-ol.sublime-project",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/include/utils.h",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/Makefile",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/libft/libft.h",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/include/libft.h",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/include/params.h",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/include/mlx.h",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/include/keycodes.h",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/include/types.h",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/include/mlx_utils.h",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/src/mlx_utils.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/libft/ft_substr.c",
+		"/usr/include/math.h",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/.gitignore",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/src/main.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/src/float_validator.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/obj/main.d",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx_clear_window.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/Makefile",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/src/test.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/keycodes.h",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/types.h",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/params.h",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/main.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx_loop_hook.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/libft/ft_itoa.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx_int.h",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/mlx_utils.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx_mouse_hook.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx_key_hook.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx_int_param_event.c",
+		"/usr/include/X11/Xlib.h",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx_new_window.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/mlx_utils.h",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx_get_data_addr.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/structs.h",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/test.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx_expose_hook.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx_int_wait_first_expose.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx_new_image.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/save.sh",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/structs.h",
+		"/usr/include/X11/X.h",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx_put_image_to_window.c",
+		"/usr/include/X11/keysymdef.h",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx_set_font.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx_string_put.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/lib_test.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx_get_color_value.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx.h",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx_init.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/gl_test.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx_xpm.c",
+		"/home/psharen/Documents/projects/school21/42curcus/other/minilibx-examples/main.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx_pixel_put.c",
+		"/home/psharen/Documents/projects/school21/42curcus/fract-ol/minilibx-linux/mlx_int_set_win_event_mask.c",
+		"/home/psharen/Documents/projects/school21/42curcus/minilibx-linux/mlx_new_image.c",
+		"/home/psharen/Documents/projects/school21/42curcus/minilibx-linux/mlx_new_window.c",
+		"/home/psharen/Documents/projects/school21/42curcus/minilibx-linux/Makefile",
+		"/home/psharen/Documents/projects/school21/42curcus/minilibx_mms_20200219/Makefile",
+		"/home/psharen/Documents/projects/school21/42curcus/push_swap/ft_pushswap.c",
+		"/home/psharen/Documents/projects/school21/42curcus/push_swap/compile_commands.json",
+		"/home/psharen/Documents/projects/school21/42curcus/push_swap/Makefile",
+		"/home/psharen/Documents/projects/school21/42curcus/push_swap/libft/ft_lstadd_front.c",
+		"/home/psharen/Documents/projects/school21/42curcus/push_swap/libft/ft_lstnew.c",
+		"/home/psharen/Documents/projects/school21/42curcus/push_swap/libft/ft_lstclear.c",
+		"/home/psharen/Documents/projects/school21/42curcus/push_swap/push_swap.sublime-project",
+		"/home/psharen/Documents/projects/school21/42curcus/push_swap/libft/libft.h",
+		"/home/psharen/.config/sublime-text/Packages/Makefile/Make.sublime-build",
+		"/home/psharen/Documents/projects/school21/42curcus/push_swap/main.c",
+		"/home/psharen/Documents/projects/school21/42curcus/push_swap/libft/ft_putstr.c",
+		"/home/psharen/Documents/projects/school21/42curcus/push_swap/libft/ft_atoi.c",
+		"/home/psharen/Documents/projects/school21/42curcus/push_swap/libft/Makefile",
+		"/home/psharen/Documents/projects/school21/42curcus/b2br/intra/signature.txt",
+		"/home/psharen/Documents/projects/school21/42curcus/b2br/monitoring.sh",
+		"/home/psharen/Downloads/Telegram Desktop/born2beroot (2).txt",
+		"/home/psharen/Documents/projects/school21/42curcus/b2br/passwords.txt",
+		"/home/psharen/Documents/projects/school21/42curcus/b2br/cpu_top.sh",
+		"/home/psharen/Documents/projects/school21/42curcus/b2br/cpu_stat.sh",
+		"/home/psharen/Documents/projects/school21/42curcus/b2br/another_monitoring.sh",
+		"/home/psharen/Documents/notes/obsidian-notes/.obsidian/themes/Atom.css",
+		"/home/psharen/Documents/projects/school21/b2br/list_users.sh",
+		"/home/psharen/Documents/projects/school21/b2br/another_monitoring.sh",
+		"/home/psharen/Documents/projects/school21/b2br/monitoring.sh",
+		"/etc/login.defs",
+		"/home/psharen/Documents/notes/obsidian-notes/Managing users in Linux.md",
+		"/home/psharen/.config/touchegg/touchegg.conf",
+		"/home/psharen/Documents/projects/school21/42curcus/printf/monitoring.sh",
+		"/home/psharen/Documents/projects/school21/42curcus/printf/libft/Makefile",
+		"/home/psharen/Documents/notes/obsidian-notes/Makefile.md",
+		"/home/psharen/packages.txt",
+		"/home/psharen/package",
+		"/home/psharen/VirtualBox VMs/b2br/b2br.vbox-prev",
+		"/home/psharen/VirtualBox VMs/b2br/b2br.vbox",
+		"/home/psharen/Documents/projects/school21/42curcus/printf/libft/ft_putchar_renamed.c",
+		"/home/psharen/Documents/projects/school21/42curcus/printf/utils.c",
+		"/home/psharen/Documents/projects/school21/42curcus/printf/Makefile",
+		"/home/psharen/Documents/projects/school21/42curcus/printf/ft_printf.c",
+		"/home/psharen/Documents/projects/school21/42curcus/printf/ft_printf.h",
+		"/home/psharen/Documents/projects/school21/42curcus/printf/libft/ft_putchar.c",
+		"/home/psharen/Documents/projects/school21/42curcus/printf/libft_utils.c",
+		"/home/psharen/Documents/projects/school21/42curcus/printf/libft_utils.h",
+		"/home/psharen/Documents/projects/school21/42curcus/printf/libft/libft.h",
+		"/home/psharen/Documents/projects/school21/42curcus/printf/utils.h",
+		"/home/psharen/Documents/projects/school21/42curcus/printf/libft/ft_strlen.c",
+		"/home/psharen/Documents/projects/school21/42curcus/printf/libft/ft_strchr.c",
+		"/home/psharen/Documents/projects/school21/42curcus/printf/libft/ft_putstr.c"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 148.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/main.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1178,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1165,
+								1165
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": ".<>:\"/",
+									"selector": "punctuation.accessor | (meta.preprocessor.include string - punctuation.definition.string.end)",
+									"server": "clangd"
+								}
+							],
+							"lsp_active": true,
+							"lsp_hover_provider_count": 1,
+							"lsp_uri": "file:///home/psharen/Documents/projects/school21/42curcus/pipex/src/main.c",
+							"show_definitions": false,
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 174.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/psharen/Documents/projects/school21/42curcus/other/examples/pipe_example.c",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1021,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								593,
+								593
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": ".<>:\"/",
+									"selector": "punctuation.accessor | (meta.preprocessor.include string - punctuation.definition.string.end)",
+									"server": "clangd"
+								}
+							],
+							"lsp_active": true,
+							"lsp_hover_provider_count": 1,
+							"lsp_uri": "file:///home/psharen/Documents/projects/school21/42curcus/other/examples/pipe_example.c",
+							"show_definitions": false,
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4
+						},
+						"translation.x": 0.0,
+						"translation.y": 609.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/usr/include/stdlib.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 36061,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21160,
+								21160
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": ".<>:\"/",
+									"selector": "punctuation.accessor | (meta.preprocessor.include string - punctuation.definition.string.end)",
+									"server": "clangd"
+								}
+							],
+							"lsp_active": true,
+							"lsp_hover_provider_count": 1,
+							"lsp_uri": "file:///usr/include/stdlib.h",
+							"show_definitions": false,
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 17432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 40.0
+	},
+	"input":
+	{
+		"height": 75.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.Debugger":
+	{
+		"height": 404.0
+	},
+	"output.Debugger: Console":
+	{
+		"height": 0.0
+	},
+	"output.Debugger: Protocol":
+	{
+		"height": 0.0
+	},
+	"output.SublimeLinter":
+	{
+		"height": 196.0
+	},
+	"output.Terminus":
+	{
+		"height": 196.0
+	},
+	"output.astyle_error_message":
+	{
+		"height": 0.0
+	},
+	"output.diagnostics":
+	{
+		"height": 196.0
+	},
+	"output.exec":
+	{
+		"height": 335.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.language servers":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.references":
+	{
+		"height": 196.0
+	},
+	"output.rename":
+	{
+		"height": 196.0
+	},
+	"pinned_build_system": "Run pipex",
+	"project": "pipex.sublime-project",
+	"replace":
+	{
+		"height": 76.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"memmo",
+				"libft/ft_memmove.c"
+			],
+			[
+				"libft",
+				"include/libft.h"
+			],
+			[
+				"libf",
+				"libft/libft.h"
+			],
+			[
+				"libft.h",
+				"libft/libft.h"
+			],
+			[
+				"strcmp",
+				"libft/ft_strncmp.c"
+			],
+			[
+				"keys",
+				"include/keycodes.h"
+			],
+			[
+				"mlxutilsh",
+				"include/mlx_utils.h"
+			],
+			[
+				"mlx_ut",
+				"include/mlx_utils.h"
+			],
+			[
+				"makefile",
+				"Makefile"
+			],
+			[
+				"main",
+				"src/main.c"
+			],
+			[
+				"atoi",
+				"libft/ft_atoi.c"
+			],
+			[
+				"puts",
+				"libft/ft_putstr.c"
+			],
+			[
+				"putchar",
+				"libft/ft_putchar.c"
+			],
+			[
+				"utils.h",
+				"utils.h"
+			],
+			[
+				"strlen",
+				"libft/ft_strlen.c"
+			],
+			[
+				"strchr",
+				"libft/ft_strchr.c"
+			],
+			[
+				"putstr",
+				"libft/ft_putstr.c"
+			],
+			[
+				"putchra",
+				"libft/ft_putchar.c"
+			],
+			[
+				"putch",
+				"libft/ft_putchar.c"
+			],
+			[
+				"make",
+				"libft/Makefile"
+			],
+			[
+				".giti",
+				".gitignore"
+			],
+			[
+				"putc",
+				"libft/ft_putchar.c"
+			],
+			[
+				"putnbr",
+				"libft/ft_putnbr.c"
+			],
+			[
+				"ft_put",
+				"libft/ft_putnbr.c"
+			],
+			[
+				"mae",
+				"Makefile"
+			],
+			[
+				"ft_putstr",
+				"libft/ft_putstr_fd.c"
+			],
+			[
+				"substr",
+				"printf/libft/ft_substr.c"
+			],
+			[
+				"ft_putnbr",
+				"c-piscine/c04/ex02/ft_putnbr.c"
+			],
+			[
+				"ft_puts",
+				"c-piscine/c01/ex05/ft_putstr.c"
+			],
+			[
+				"atio",
+				"libft/ft_atoi.c"
+			],
+			[
+				"str",
+				"libft/ft_strchr.c"
+			],
+			[
+				"trim",
+				"libft/ft_strtrim.c"
+			],
+			[
+				"hel",
+				"get_next_line/hello.txt"
+			],
+			[
+				"hell",
+				"get_next_line/hello.txt"
+			],
+			[
+				"he",
+				"get_next_line/hello.txt"
+			],
+			[
+				"ge",
+				"get_next_line/get_next_line.h"
+			],
+			[
+				"strdup",
+				"42curcus/libft/ft_strdup.c"
+			],
+			[
+				"call",
+				"42curcus/libft/ft_calloc.c"
+			],
+			[
+				"isasc",
+				"42curcus/libft/ft_isascii.c"
+			],
+			[
+				"isasci",
+				"ft_isascii.c"
+			],
+			[
+				"getne",
+				"42curcus/get_next_line/get_next_line.c"
+			],
+			[
+				"putnbr_fd",
+				"42curcus/libft/ft_putnbr_fd.c"
+			],
+			[
+				"memchr",
+				"42curcus/libft/ft_memchr.c"
+			],
+			[
+				"split",
+				"42curcus/libft/ft_split.c"
+			],
+			[
+				"memcpy",
+				"42curcus/gsteel/libft/ft_memcpy.c"
+			],
+			[
+				"strncpy",
+				"c-piscine/c02/ex01/ft_strncpy.c"
+			],
+			[
+				"strcpy",
+				"c-piscine/c02/ex00/ft_strcpy.c"
+			],
+			[
+				"ft_strlen",
+				"42curcus/nomargen/libft/ft_strlen.c"
+			],
+			[
+				"substr nomar",
+				"42curcus/nomargen/libft/ft_substr.c"
+			],
+			[
+				"subsrt",
+				"42curcus/libft/ft_substr.c"
+			],
+			[
+				"get",
+				"42curcus/get_next_line/get_next_line.c"
+			],
+			[
+				"isasi",
+				"42curcus/libft/ft_isascii.c"
+			],
+			[
+				"isapl",
+				"42curcus/libft/ft_isalpha.c"
+			],
+			[
+				"strnstr",
+				"42curcus/libft/ft_strnstr.c"
+			],
+			[
+				"lstclear",
+				"42curcus/libft/ft_lstclear_bonus.c"
+			],
+			[
+				"lstdelone",
+				"42curcus/libft/ft_lstdelone_bonus.c"
+			],
+			[
+				"ft_memcpy",
+				"42curcus/libft/ft_memcpy.c"
+			],
+			[
+				"memmove",
+				"42curcus/libft/ft_memmove.c"
+			],
+			[
+				"lstnew",
+				"42curcus/libft/ft_lstnew_bonus.c"
+			],
+			[
+				"lstadd",
+				"42curcus/libft/ft_lstadd_front_bonus.c"
+			],
+			[
+				"settings",
+				"42curcus/libft/libftTester/.vscode/settings.json"
+			],
+			[
+				".git",
+				"42curcus/get_next_line/.gitignore"
+			],
+			[
+				"itoa",
+				"42curcus/libft/ft_itoa.c"
+			],
+			[
+				"mak",
+				"42curcus/libft/Makefile"
+			],
+			[
+				"ma",
+				"42curcus/libft/Makefile"
+			],
+			[
+				"lib",
+				"42curcus/libft/libft.h"
+			],
+			[
+				"addfront",
+				"42curcus/libft/ft_lstadd_front_bonus.c"
+			],
+			[
+				"delone",
+				"42curcus/libft/ft_lstdelone_bonus.c"
+			],
+			[
+				"ft_lstadd_Back",
+				"42curcus/libft/libftTester/tests/ft_lstadd_back_test.cpp"
+			],
+			[
+				"lstadd_",
+				"42curcus/libft/ft_lstadd_back_bonus.c"
+			],
+			[
+				"strmapi",
+				"42curcus/libft/ft_strmapi.c"
+			],
+			[
+				"putstr_fd",
+				"42curcus/libft/ft_putstr_fd.c"
+			],
+			[
+				"strdu",
+				"42curcus/libft/ft_strdup.c"
+			],
+			[
+				"check.",
+				"42curcus/libft/libftTester/utils/check.cpp"
+			],
+			[
+				"itoa_test",
+				"42curcus/libft/libftTester/tests/ft_itoa_test.cpp"
+			],
+			[
+				"strjo",
+				"42curcus/libft/ft_strjoin.c"
+			],
+			[
+				"strtri",
+				"42curcus/libft/ft_strtrim.c"
+			],
+			[
+				"ft_split",
+				"42curcus/libft/libftTester/tests/ft_split_test.cpp"
+			],
+			[
+				"strtr",
+				"42curcus/libft/ft_strtrim.c"
+			],
+			[
+				"subst",
+				"42curcus/libft/ft_substr.c"
+			],
+			[
+				"strlcpy",
+				"42curcus/libft/ft_strlcpy.c"
+			],
+			[
+				"ft_subs",
+				"42curcus/libft/ft_substr.c"
+			],
+			[
+				"ft_subst",
+				"42curcus/libft/ft_substr.c"
+			],
+			[
+				"li",
+				"42curcus/libft/libft.h"
+			],
+			[
+				"strncmp",
+				"42curcus/libft/ft_strncmp.c"
+			],
+			[
+				"bze",
+				"42curcus/libft/ft_bzero.c"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 625.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/projects/school21/42curcus/fract-ol/fract-ol.sublime-project"
+			]
+		],
+		"width": 475.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 338.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

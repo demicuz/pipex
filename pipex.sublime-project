@@ -1,0 +1,16 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"build_systems":
+	[
+		{
+			"working_dir": "$project_path",
+			"name": "Run pipex",
+			"shell_cmd": "make pipex && ./pipex infile 'my_echo hello world' hello world outfile"
+		}
+	]
+}

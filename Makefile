@@ -8,14 +8,14 @@ LIBFT_DIR	:= libft
 
 LIBFT		:= $(LIB_DIR)/libft.a
 
-SRC_FILES	:= main.c
+SRC_FILES	:= main.c utils.c
 SRC			:= $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 OBJ			:= $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
 # TODO
 CC			:= clang
 CPPFLAGS	:= -I include -I $(LIBFT_DIR) -MMD -MP
-CFLAGS		:= -O3 -Wall#-Werror -Wextra
+CFLAGS		:= -Wall -g#-Werror -Wextra
 LDFLAGS		:= -L$(LIB_DIR)
 LDLIBS		:= -lft
 
@@ -30,10 +30,10 @@ $(LIBFT): $(LIB_DIR)
 	cp $(LIBFT_DIR)/libft.a $(LIB_DIR)
 
 $(NAME): $(OBJ) $(LIBFT)
-	$(CC) $(LDFLAGS) $(OBJ) $(LDLIBS) -o $(NAME)
+	@$(CC) $(LDFLAGS) $(OBJ) $(LDLIBS) -o $(NAME)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
-	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR) $(LIB_DIR):
 	mkdir -p $@

@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PIPEX_H
-# define PIPEX_H
+#include <stdlib.h>
+#include <stdio.h>
 
-void	error(char *e);
-
-# define HELP_MESSAGE "Usage: ./pipex <file_in> <cmd1> ... <cmdn> <file_out>\n"
-
-#endif
+void	error(char *e)
+{
+	perror(e);
+	exit(EXIT_FAILURE);
+}
