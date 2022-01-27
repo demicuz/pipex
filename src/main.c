@@ -22,13 +22,6 @@
 #include <libft.h>
 #include <pipex.h>
 
-// if (access("/usr/bin/wc", X_OK) != 0)
-// {
-// 	perror("access");
-// }
-// else
-// 	puts("can access");
-
 void	clean_pipes()
 {
 	int fd[2];
@@ -76,7 +69,7 @@ void	create_pipeline(t_pipeline *pl, int n_pipes, int fd_in, int fd_out)
 	pl->array = malloc(sizeof(int *) * (n_pipes * 2 + 2));
 	if (pl->array == NULL)
 		error("malloc");
-	pl->len = n_pipes + 1;
+	pl->len = (n_pipes + 1) * 2;
 	pl->array[0] = fd_in;
 	pl->array[n_pipes * 2 + 1] = fd_out;
 	i = 0;
@@ -90,22 +83,6 @@ void	create_pipeline(t_pipeline *pl, int n_pipes, int fd_in, int fd_out)
 	}
 }
 
-// void	execute_cmd(const char *cmd, char **envp, int fd_in, int fd_out)
-// {
-// 	char	**cmd_split;
-
-// 	cmd_split = ft_split(cmd, ' ');
-// 	dup2(fd_in, STDIN_FILENO);
-// 	dup2(fd_out, STDOUT_FILENO);
-// 	close(fd_in);
-// 	close(fd_out);
-// 	// TODO check if can access command
-// 	// if (access("my_echo", X_OK) == -1)
-// 	// 	error("access");
-// 	execve(cmd_split[0], cmd_split, envp);
-// 	error("execve");
-// }
-
 void	close_fds(t_pipeline *pl)
 {
 	int	i;
@@ -113,8 +90,7 @@ void	close_fds(t_pipeline *pl)
 	i = 0;
 	while (i < pl->len)
 	{
-		close(pl->array[i * 2]);
-		close(pl->array[i * 2 + 1]);
+		close(pl->array[i]);
 		i++;
 	}
 }
@@ -132,8 +108,25 @@ void	free_string_array(char *a[])
 	free(a);
 }
 
-// If doesn't find a path, returns name anyway, and then exec throws "No such
-// file or directory". Explicit is better than implicit. Not my case.
+char	*search_PATH(char *dirs[], char *slash_name)
+{
+	int		i;
+	char	*abs_path;
+
+	i = 0;
+	while (dirs[i])
+	{
+		abs_path = ft_strjoin(dirs[i], slash_name);
+		if (access(abs_path, X_OK) == 0)
+			return (abs_path);
+		free(abs_path);
+		i++;
+	}
+	return (NULL);
+}
+
+// If path is not found, returns name. It will throw "No such file or directory"
+// error later in exec anyway. Implicit is better than implicit. Not my case.
 char	*get_path(char *name, const char *envp[])
 {
 	int		i;
@@ -148,18 +141,12 @@ char	*get_path(char *name, const char *envp[])
 		i++;
 	dirs = ft_split(envp[i] + 5, ':');
 	slash_name = ft_strjoin("/", name);
-	i = 0;
-	while (dirs[i])
-	{
-		abs_path = ft_strjoin(dirs[i], slash_name);
-		if (access(abs_path, X_OK) == 0)
-			break ;
-		free(abs_path);
-		i++;
-	}
+	abs_path = search_PATH(dirs, slash_name);
 	free_string_array(dirs);
 	free(slash_name);
-	return name;
+	if (!abs_path)
+		return (name);
+	return (abs_path);
 }
 
 void	execute_cmd(const char *cmd, const char *envp[], int *fd, t_pipeline *pl)
@@ -182,31 +169,6 @@ void	execute_cmd(const char *cmd, const char *envp[], int *fd, t_pipeline *pl)
 	}
 	execve(path, cmd_split, (char **) envp);
 	error(cmd_split[0]);
-	// error("execve");
-}
-
-// void	spawn(const char *cmd, **envp)
-// {
-
-// }
-
-// Close all but needed in/out descriptors
-void	close_unused_fds(int *pipeline, int len, int i_exclude)
-{
-	int	i;
-
-	i = 0;
-	while (i < len)
-	{
-		if (i == i_exclude)
-		{
-			i++;
-			continue ;
-		}
-		close(pipeline[i * 2]);
-		close(pipeline[i * 2 + 1]);
-		i++;
-	}
 }
 
 void	pipex(int argc, const char *argv[], const char *envp[])
