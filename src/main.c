@@ -20,6 +20,7 @@
 // #include <limits.h>
 
 #include <libft.h>
+#include <ft_printf.h>
 #include <pipex.h>
 
 void	clean_pipes()
@@ -196,7 +197,7 @@ void	pipex(int argc, const char *argv[], const char *envp[])
 		}
 		else if (pid == 0)
 			execute_cmd(argv[i + 1], envp, &pl.array[i * 2], &pl);
-		printf("created procces #%d (%d), parent: %d\n", i + 1, pid, getpid());
+		ft_printf("created procces #%d: %d\n", i + 1, pid);
 		i++;
 	}
 	close_fds(&pl);
@@ -214,7 +215,7 @@ int main(int argc, const char *argv[], const char *envp[])
 	}
 	pipex(argc - 1, &argv[1], envp);
 	while ((wpid = wait(NULL)) > 0)
-		printf("Done with %d\n", wpid);
+		ft_printf("Done with: %d\n", wpid);
 	puts("Should be finished now");
 	return (EXIT_SUCCESS);
 }

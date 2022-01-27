@@ -8,7 +8,7 @@ LIBFT_DIR	:= libft
 
 LIBFT		:= $(LIB_DIR)/libft.a
 
-SRC_FILES	:= main.c utils.c
+SRC_FILES	:= main.c utils.c ft_printf.c ft_printf_utils.c
 SRC			:= $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 OBJ			:= $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 

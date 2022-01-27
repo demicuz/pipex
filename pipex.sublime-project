@@ -10,7 +10,7 @@
 		{
 			"working_dir": "$project_path",
 			"name": "Run pipex",
-			"shell_cmd": "make pipex && ./pipex infile 'grep world' 'wc -l' my_echo nonexist outfile"
+			"shell_cmd": "make pipex && ./pipex infile 'grep world' 'wc -l' nonexist my_echo outfile"
 		}
 	]
 }
