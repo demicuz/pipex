@@ -196,7 +196,7 @@ void	pipex(int argc, const char *argv[], const char *envp[])
 		}
 		else if (pid == 0)
 			execute_cmd(argv[i + 1], envp, &pl.array[i * 2], &pl);
-		printf("created %d\n", pid);
+		printf("created procces #%d (%d), parent: %d\n", i + 1, pid, getpid());
 		i++;
 	}
 	close_fds(&pl);

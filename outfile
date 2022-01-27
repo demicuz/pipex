@@ -1,5 +1,3 @@
-argv[0] : my_echo
-Whoa, I've read something from stdin!
-created 15515
-created 15516
-
+created procces #1 (16835), parent: 16826
+created procces #2 (16836), parent: 16826
+created procces #3 (16837), parent: 16826
