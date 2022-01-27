@@ -56,7 +56,8 @@ int	my_open(const char *file, int flags, mode_t mode)
 	return (fd);
 }
 
-// Returns an array of ints. Every pair corresponds to pipe read/write.
+// Returns an array of ints. Every pair corresponds to read/write fd.
+// The first one is fd_in, then pipes, the last one is fd_out.
 int	*create_pipeline(int n_pipes, int fd_in, int fd_out)
 {
 	int *pipeline;
@@ -79,15 +80,32 @@ int	*create_pipeline(int n_pipes, int fd_in, int fd_out)
 	return pipeline;
 }
 
-void	execute_command(const char *cmd, char **envp, int fd_in, int fd_out)
+// void	execute_command(const char *cmd, char **envp, int fd_in, int fd_out)
+// {
+// 	char	**cmd_split;
+
+// 	cmd_split = ft_split(cmd, ' ');
+// 	dup2(fd_in, STDIN_FILENO);
+// 	dup2(fd_out, STDOUT_FILENO);
+// 	close(fd_in);
+// 	close(fd_out);
+// 	// TODO check if can access command
+// 	// if (access("my_echo", X_OK) == -1)
+// 	// 	error("access");
+// 	execve(cmd_split[0], cmd_split, envp);
+// 	error("execve");
+// }
+
+void	execute_command(const char *cmd, char **envp, int *fd)
 {
 	char	**cmd_split;
 
 	cmd_split = ft_split(cmd, ' ');
-	dup2(fd_in, STDIN_FILENO);
-	dup2(fd_out, STDOUT_FILENO);
-	close(fd_in);
-	close(fd_out);
+	dup2(fd[0], STDIN_FILENO);
+	dup2(fd[1], STDOUT_FILENO);
+	// TODO close all
+	close(fd[0]);
+	close(fd[1]);
 	// TODO check if can access command
 	// if (access("my_echo", X_OK) == -1)
 	// 	error("access");
@@ -105,12 +123,17 @@ void	pipex(int argc, const char *argv[], const char *envp[])
 	int	fd_in;
 	int	fd_out;
 	int	*pipes;
+	int	i;
+	pid_t pid;
 
 	fd_in = my_open(argv[0], O_RDONLY, 0);
 	fd_out = my_open(argv[argc - 1], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	pipes = create_pipeline(argc - 3, fd_in, fd_out);
-	
+	i = 0;
+	// while (i < argc - 1)
+	// {
 
+	// }
 }
 
 int main(int argc, const char *argv[], const char *envp[])
