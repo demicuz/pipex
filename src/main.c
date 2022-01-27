@@ -84,7 +84,8 @@ void	create_pipeline(t_pipeline *pl, int n_pipes, int fd_in, int fd_out)
 	}
 }
 
-// Have to free pl->array, otherwise Valgrind shows a leak here. Wat?
+// Have to free pl->array, otherwise Valgrind shows a leak create_pipeline().
+// Wat?
 void	close_fds(t_pipeline *pl)
 {
 	int	i;
