@@ -38,11 +38,6 @@ void	clean_pipes()
 	}
 }
 
-void	do_me(const char *command)
-{
-
-}
-
 int	my_open(const char *file, int flags, mode_t mode)
 {
 	int	fd;
@@ -62,24 +57,26 @@ int	my_open(const char *file, int flags, mode_t mode)
 }
 
 // Returns an array of ints. Every pair corresponds to pipe read/write.
-int	*create_pipes(int n)
+int	*create_pipeline(int n_pipes, int fd_in, int fd_out)
 {
-	int *pipes;
+	int *pipeline;
 	int i;
 	int ret;
 
-	pipes = malloc(sizeof(int *) * n * 2);
-	if (pipes == NULL)
+	pipeline = malloc(sizeof(int *) * (n_pipes * 2 + 2));
+	if (pipeline == NULL)
 		error("malloc");
+	pipeline[0] = fd_in;
+	pipeline[n_pipes * 2 + 1] = fd_out;
 	i = 0;
-	while (i < n)
+	while (i < n_pipes)
 	{
-		ret = pipe(&pipes[i * 2]);
+		ret = pipe(&pipeline[i * 2 + 1]);
 		if (ret == -1)
 			error("pipe");
 		i++;
 	}
-	return pipes;
+	return pipeline;
 }
 
 void	execute_command(const char *cmd, char **envp, int fd_in, int fd_out)
@@ -92,8 +89,16 @@ void	execute_command(const char *cmd, char **envp, int fd_in, int fd_out)
 	close(fd_in);
 	close(fd_out);
 	// TODO check if can access command
+	// if (access("my_echo", X_OK) == -1)
+	// 	error("access");
 	execve(cmd_split[0], cmd_split, envp);
+	error("execve");
 }
+
+// void	spawn(const char *cmd, **envp)
+// {
+
+// }
 
 void	pipex(int argc, const char *argv[], const char *envp[])
 {
@@ -103,16 +108,9 @@ void	pipex(int argc, const char *argv[], const char *envp[])
 
 	fd_in = my_open(argv[0], O_RDONLY, 0);
 	fd_out = my_open(argv[argc - 1], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	pipes = create_pipes(argc - 3);
-	if (access("my_echo", X_OK) == -1)
-		error("access");
-	else
-	{
-		char *cmd[] = { (char*) "my_echo", "hello", "world", 0 };
-		puts(cmd[0]);
-		if (execve("my_echo", cmd, (char**) envp) == -1)
-			error("execve");
-	}
+	pipes = create_pipeline(argc - 3, fd_in, fd_out);
+	
+
 }
 
 int main(int argc, const char *argv[], const char *envp[])
