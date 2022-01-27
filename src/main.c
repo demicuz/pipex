@@ -122,13 +122,13 @@ void	pipex(int argc, const char *argv[], const char *envp[])
 {
 	int	fd_in;
 	int	fd_out;
-	int	*pipes;
+	int	*pipeline;
 	int	i;
 	pid_t pid;
 
 	fd_in = my_open(argv[0], O_RDONLY, 0);
 	fd_out = my_open(argv[argc - 1], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	pipes = create_pipeline(argc - 3, fd_in, fd_out);
+	pipeline = create_pipeline(argc - 3, fd_in, fd_out);
 	i = 0;
 	// while (i < argc - 1)
 	// {
