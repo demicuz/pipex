@@ -1,7 +1,8 @@
 /lib
 /obj
 /.cache
-pipex
 compile_commands.json
+*.sublime-workspace
+pipex
 save.sh
 my_echo
