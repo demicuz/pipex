@@ -23,16 +23,6 @@
 #include <ft_printf.h>
 #include <pipex.h>
 
-void	clean_pipes()
-{
-	int fd[2];
-	if (pipe(fd) == -1)
-	{
-		perror("pipe");
-		exit(EXIT_FAILURE);
-	}
-}
-
 int	my_open(const char *file, int flags, mode_t mode)
 {
 	int	fd;
@@ -84,6 +74,7 @@ void	create_pipeline(t_pipeline *pl, int n_pipes, int fd_in, int fd_out)
 	}
 }
 
+// TODO
 // Have to free pl->array, otherwise Valgrind shows a leak create_pipeline().
 // Wat?
 void	close_fds(t_pipeline *pl)
