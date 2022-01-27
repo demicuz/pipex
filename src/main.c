@@ -57,7 +57,7 @@ int	my_open(const char *file, int flags, mode_t mode)
 	return (fd);
 }
 
-void	swap(int *a, int *b){
+void	swap(int *a, int *b) {
 	int	t;
 
 	t = *a;
@@ -118,18 +118,65 @@ void	close_fds(t_pipeline *pl)
 	}
 }
 
-void	execute_cmd(const char *cmd, const char **envp, int *fd, t_pipeline *pl)
+void	free_string_array(char *a[])
+{
+	size_t	i;
+
+	i = 0;
+	while (a[i])
+	{
+		free(a[i]);
+		i++;
+	}
+	free(a);
+}
+
+char	*get_absolute_path(char *name, const char *envp[])
+{
+	int		i;
+	char	**dirs;
+	char	*slash_name;
+	char	*abs_path;
+
+	i = 0;
+	while (ft_strncmp(envp[i], "PATH", 4) != 0)
+		i++;
+	dirs = ft_split(envp[i] + 5, ':');
+	slash_name = ft_strjoin("/", name);
+	i = 0;
+	while (dirs[i])
+	{
+		abs_path = ft_strjoin(dirs[i], slash_name);
+		if (access(abs_path, X_OK) == 0)
+			break;
+		free(abs_path);
+		i++;
+	}
+	free_string_array(dirs);
+	free(slash_name);
+	return (abs_path);
+}
+
+void	execute_cmd(const char *cmd, const char *envp[], int *fd, t_pipeline *pl)
 {
 	char	**cmd_split;
+	char	*abs_path;
 
 	cmd_split = ft_split(cmd, ' ');
+	abs_path = get_absolute_path(cmd_split[0], envp);
 	dup2(fd[0], STDIN_FILENO);
 	dup2(fd[1], STDOUT_FILENO);
 	close_fds(pl);
 	// TODO check if can access command
-	// if (access("my_echo", X_OK) == -1)
-	// 	error("access");
-	execve(cmd_split[0], cmd_split, (char **) envp);
+	if (abs_path == NULL)
+	{
+		// TODO maybe use printf?
+		ft_putstr("Command not found: ");
+		ft_putstr(cmd);
+		ft_putstr("\n");
+		exit(EXIT_FAILURE);
+	}
+	execve(abs_path, cmd_split, (char **) envp);
 	error("execve");
 }
 
@@ -174,8 +221,13 @@ void	pipex(int argc, const char *argv[], const char *envp[])
 		printf("forking process number %d\n", i);
 		pid = fork();
 		if (pid == -1)
-			// TODO if parent has children, those become zombies in case of error
-			error("fork");
+		{
+			ft_putstr("Error creating a fork\n");
+			return ;
+			// TODO if I just call error("fork") and parent has children, those
+			// become zombies in case of error (I think)
+			// error("fork");
+		}
 		else if (pid == 0)
 			execute_cmd(argv[i + 1], envp, &pl.array[i * 2], &pl);
 		i++;

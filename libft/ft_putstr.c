@@ -13,7 +13,7 @@
 #include <unistd.h>
 #include "libft.h"
 
-void	ft_putstr(char *str)
+void	ft_putstr(const char *str)
 {
 	size_t	len;
 
