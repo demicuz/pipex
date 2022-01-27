@@ -76,6 +76,7 @@ void	create_pipeline(t_pipeline *pl, int n_pipes, int fd_in, int fd_out)
 	pl->array = malloc(sizeof(int *) * (n_pipes * 2 + 2));
 	if (pl->array == NULL)
 		error("malloc");
+	pl->len = n_pipes + 1;
 	pl->array[0] = fd_in;
 	pl->array[n_pipes * 2 + 1] = fd_out;
 	i = 0;
@@ -218,7 +219,6 @@ void	pipex(int argc, const char *argv[], const char *envp[])
 	i = 0;
 	while (i < argc - 2)
 	{
-		printf("forking process number %d\n", i);
 		pid = fork();
 		if (pid == -1)
 		{
@@ -230,8 +230,10 @@ void	pipex(int argc, const char *argv[], const char *envp[])
 		}
 		else if (pid == 0)
 			execute_cmd(argv[i + 1], envp, &pl.array[i * 2], &pl);
+		printf("created %d\n", pid);
 		i++;
 	}
+	close_fds(&pl);
 }
 
 int main(int argc, const char *argv[], const char *envp[])
@@ -246,7 +248,7 @@ int main(int argc, const char *argv[], const char *envp[])
 	}
 	pipex(argc - 1, &argv[1], envp);
 	while ((wpid = wait(NULL)) > 0)
-		printf("Done with process %d\n", wpid);
+		printf("Done with %d\n", wpid);
 	puts("Should be finished now");
 	return (EXIT_SUCCESS);
 }
