@@ -159,14 +159,14 @@ void	execute_cmd(const char *cmd, const char *envp[], int *fd, t_pipeline *pl)
 	dup2(fd[0], STDIN_FILENO);
 	dup2(fd[1], STDOUT_FILENO);
 	close_fds(pl);
-	if (path == NULL)
-	{
-		// TODO maybe use printf?
-		ft_putstr_fd("Command not found: ", STDERR_FILENO);
-		ft_putstr_fd(cmd, STDERR_FILENO);
-		ft_putstr_fd("\n", STDERR_FILENO);
-		exit(EXIT_FAILURE);
-	}
+	// if (path == NULL)
+	// {
+	// 	// TODO maybe use printf?
+	// 	ft_putstr_fd("Command not found: ", STDERR_FILENO);
+	// 	ft_putstr_fd(cmd, STDERR_FILENO);
+	// 	ft_putstr_fd("\n", STDERR_FILENO);
+	// 	exit(EXIT_FAILURE);
+	// }
 	execve(path, cmd_split, (char **) envp);
 	error(cmd_split[0]);
 }
