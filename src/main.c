@@ -68,30 +68,28 @@ void	swap(int *a, int *b){
 // Returns an array of ints. Every pair corresponds to read/write fd.
 // The first one is fd_in, then pipes, the last one is fd_out.
 // {file_in, pipe1_out, pipe1_in, ..., pipen_out, pipen_in, file_out}
-int	*create_pipeline(int n_pipes, int fd_in, int fd_out)
+void	create_pipeline(t_pipeline *pl, int n_pipes, int fd_in, int fd_out)
 {
-	int	*pl;
 	int i;
 	int ret;
 
-	pl = malloc(sizeof(int *) * (n_pipes * 2 + 2));
-	if (pl == NULL)
+	pl->array = malloc(sizeof(int *) * (n_pipes * 2 + 2));
+	if (pl->array == NULL)
 		error("malloc");
-	pl[0] = fd_in;
-	pl[n_pipes * 2 + 1] = fd_out;
+	pl->array[0] = fd_in;
+	pl->array[n_pipes * 2 + 1] = fd_out;
 	i = 0;
 	while (i < n_pipes)
 	{
-		ret = pipe(&pl[i * 2 + 1]);
+		ret = pipe(&pl->array[i * 2 + 1]);
 		if (ret == -1)
 			error("pipe");
-		swap(&pl[i * 2 + 1], &pl[i * 2 + 2]);
+		swap(&pl->array[i * 2 + 1], &pl->array[i * 2 + 2]);
 		i++;
 	}
-	return pl;
 }
 
-// void	execute_command(const char *cmd, char **envp, int fd_in, int fd_out)
+// void	execute_cmd(const char *cmd, char **envp, int fd_in, int fd_out)
 // {
 // 	char	**cmd_split;
 
@@ -120,16 +118,14 @@ void	close_fds(t_pipeline *pl)
 	}
 }
 
-void	execute_command(const char *cmd, const char **envp, int *fd)
+void	execute_cmd(const char *cmd, const char **envp, int *fd, t_pipeline *pl)
 {
 	char	**cmd_split;
 
 	cmd_split = ft_split(cmd, ' ');
 	dup2(fd[0], STDIN_FILENO);
 	dup2(fd[1], STDOUT_FILENO);
-	// TODO close all in one place maybe?
-	close(fd[0]);
-	close(fd[1]);
+	close_fds(pl);
 	// TODO check if can access command
 	// if (access("my_echo", X_OK) == -1)
 	// 	error("access");
@@ -165,13 +161,13 @@ void	pipex(int argc, const char *argv[], const char *envp[])
 {
 	int	fd_in;
 	int	fd_out;
-	int	*pl;
+	t_pipeline pl;
 	int	i;
 	pid_t pid;
 
 	fd_in = my_open(argv[0], O_RDONLY, 0);
 	fd_out = my_open(argv[argc - 1], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	pl = create_pipeline(argc - 3, fd_in, fd_out);
+	create_pipeline(&pl, argc - 3, fd_in, fd_out);
 	i = 0;
 	while (i < argc - 2)
 	{
@@ -181,10 +177,7 @@ void	pipex(int argc, const char *argv[], const char *envp[])
 			// TODO if parent has children, those become zombies in case of error
 			error("fork");
 		else if (pid == 0)
-		{
-			close_unused_fds(pl, argc - 2, i);
-			execute_command(argv[i + 1], envp, &pl[i * 2]);
-		}
+			execute_cmd(argv[i + 1], envp, &pl.array[i * 2], &pl);
 		i++;
 	}
 }
