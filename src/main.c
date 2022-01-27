@@ -74,13 +74,12 @@ void	execute_commands(int argc, const char *argv[], const char *envp[])
 
 int main(int argc, const char *argv[], const char *envp[])
 {
-	if (argc >= 5)
-		execute_commands(argc - 1, &argv[1], envp);
-	else
+	if (argc < 5)
 	{
 		ft_putstr_fd("Error: Bad arguments\n", 2);
 		ft_putstr_fd(HELP_MESSAGE, 1);
 		return (EXIT_FAILURE);
 	}
+	execute_commands(argc - 1, &argv[1], envp);
 	return (EXIT_SUCCESS);
 }
