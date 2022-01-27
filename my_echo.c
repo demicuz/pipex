@@ -1,14 +1,20 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 int main(int argc, char const *argv[])
 {
-	// int fd[2];
-	// pipe(fd);
 	for (int i = 0; i < argc; ++i)
 	{
 		printf("argv[%d] : %s\n", i, argv[i]);
 	}
-	// printf("%zd\n", sizeof(int[2]));
+	char *buffer = malloc(sizeof(char) * 1000);
+	int ret = read(0, buffer, 999);
+	if (ret > 0)
+	{
+		puts("Whoa, I've read something from stdin!");
+		buffer[ret] = '\0';
+		puts(buffer);
+	}
 	return 0;
 }

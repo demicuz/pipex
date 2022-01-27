@@ -132,13 +132,17 @@ void	free_string_array(char *a[])
 	free(a);
 }
 
-char	*get_absolute_path(char *name, const char *envp[])
+// If doesn't find a path, returns name anyway, and then exec throws "No such
+// file or directory". Explicit is better than implicit. Not my case.
+char	*get_path(char *name, const char *envp[])
 {
 	int		i;
 	char	**dirs;
 	char	*slash_name;
 	char	*abs_path;
 
+	if (access(name, X_OK) == 0)
+		return name;
 	i = 0;
 	while (ft_strncmp(envp[i], "PATH", 4) != 0)
 		i++;
@@ -149,36 +153,36 @@ char	*get_absolute_path(char *name, const char *envp[])
 	{
 		abs_path = ft_strjoin(dirs[i], slash_name);
 		if (access(abs_path, X_OK) == 0)
-			break;
+			break ;
 		free(abs_path);
 		i++;
 	}
 	free_string_array(dirs);
 	free(slash_name);
-	return (abs_path);
+	return name;
 }
 
 void	execute_cmd(const char *cmd, const char *envp[], int *fd, t_pipeline *pl)
 {
 	char	**cmd_split;
-	char	*abs_path;
+	char	*path;
 
 	cmd_split = ft_split(cmd, ' ');
-	abs_path = get_absolute_path(cmd_split[0], envp);
+	path = get_path(cmd_split[0], envp);
 	dup2(fd[0], STDIN_FILENO);
 	dup2(fd[1], STDOUT_FILENO);
 	close_fds(pl);
-	// TODO check if can access command
-	if (abs_path == NULL)
+	if (path == NULL)
 	{
 		// TODO maybe use printf?
-		ft_putstr("Command not found: ");
-		ft_putstr(cmd);
-		ft_putstr("\n");
+		ft_putstr_fd("Command not found: ", STDERR_FILENO);
+		ft_putstr_fd(cmd, STDERR_FILENO);
+		ft_putstr_fd("\n", STDERR_FILENO);
 		exit(EXIT_FAILURE);
 	}
-	execve(abs_path, cmd_split, (char **) envp);
-	error("execve");
+	execve(path, cmd_split, (char **) envp);
+	error(cmd_split[0]);
+	// error("execve");
 }
 
 // void	spawn(const char *cmd, **envp)
