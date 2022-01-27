@@ -1,6 +1,7 @@
 /lib
 /obj
 /.cache
+*.o
 compile_commands.json
 *.sublime-workspace
 pipex
