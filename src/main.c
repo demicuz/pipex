@@ -94,6 +94,7 @@ void	close_fds(t_pipeline *pl)
 		close(pl->array[i]);
 		i++;
 	}
+	free(pl->array);
 }
 
 void	free_string_array(char *a[])
