@@ -12,6 +12,7 @@
 
 #include <stdio.h>
 #include <sys/types.h>
+#include <wait.h>
 #include <unistd.h>
 #include <pipex.h>
 #include <stdlib.h>
@@ -56,8 +57,17 @@ int	my_open(const char *file, int flags, mode_t mode)
 	return (fd);
 }
 
+void	swap(int *a, int *b){
+	int	t;
+
+	t = *a;
+	*a = *b;
+	*b = t;
+}
+
 // Returns an array of ints. Every pair corresponds to read/write fd.
 // The first one is fd_in, then pipes, the last one is fd_out.
+// {file_in, pipe1_out, pipe1_in, ..., pipen_out, pipen_in, file_out}
 int	*create_pipeline(int n_pipes, int fd_in, int fd_out)
 {
 	int *pipeline;
@@ -75,6 +85,7 @@ int	*create_pipeline(int n_pipes, int fd_in, int fd_out)
 		ret = pipe(&pipeline[i * 2 + 1]);
 		if (ret == -1)
 			error("pipe");
+		swap(&pipeline[i * 2 + 1], &pipeline[i * 2 + 2]);
 		i++;
 	}
 	return pipeline;
@@ -96,7 +107,7 @@ int	*create_pipeline(int n_pipes, int fd_in, int fd_out)
 // 	error("execve");
 // }
 
-void	execute_command(const char *cmd, char **envp, int *fd)
+void	execute_command(const char *cmd, const char **envp, int *fd)
 {
 	char	**cmd_split;
 
@@ -109,7 +120,7 @@ void	execute_command(const char *cmd, char **envp, int *fd)
 	// TODO check if can access command
 	// if (access("my_echo", X_OK) == -1)
 	// 	error("access");
-	execve(cmd_split[0], cmd_split, envp);
+	execve(cmd_split[0], cmd_split, (char **) envp);
 	error("execve");
 }
 
@@ -117,6 +128,25 @@ void	execute_command(const char *cmd, char **envp, int *fd)
 // {
 
 // }
+
+// Close all but needed in/out descriptors
+void	close_unused_fds(int *pipeline, int len, int i_exclude)
+{
+	int	i;
+
+	i = 0;
+	while (i < len)
+	{
+		if (i == i_exclude)
+		{
+			i++;
+			continue ;
+		}
+		close(pipeline[i * 2]);
+		close(pipeline[i * 2 + 1]);
+		i++;
+	}
+}
 
 void	pipex(int argc, const char *argv[], const char *envp[])
 {
@@ -130,10 +160,25 @@ void	pipex(int argc, const char *argv[], const char *envp[])
 	fd_out = my_open(argv[argc - 1], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	pipeline = create_pipeline(argc - 3, fd_in, fd_out);
 	i = 0;
-	// while (i < argc - 1)
-	// {
-
-	// }
+	while (i < argc - 2)
+	{
+		printf("forking process number %d\n", i);
+		pid = fork();
+		if (pid == -1)
+			// TODO if parent has children, those become zombies in case of error
+			error("fork");
+		else if (pid == 0)
+		{
+			close_unused_fds(pipeline, argc - 2, i);
+			execute_command(argv[i + 1], envp, &pipeline[i * 2]);
+		}
+		i++;
+	}
+	i = 0;
+	pid_t wpid;
+	while ((wpid = wait(NULL)) > 0)
+		printf("Done with process %d\n", wpid);
+	puts("Should be finished now");
 }
 
 int main(int argc, const char *argv[], const char *envp[])

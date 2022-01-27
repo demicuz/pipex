@@ -1,0 +1,10 @@
+    PID TTY          TIME CMD$
+ 122693 pts/1    00:00:00 man$
+ 122703 pts/1    00:00:00 less$
+ 194438 pts/2    00:00:00 gdb$
+ 194488 pts/2    00:00:00 pipex$
+ 196162 pts/4    00:00:00 gdb$
+ 196168 pts/4    00:00:00 pipex <defunct>$
+ 197266 pts/5    00:00:00 gdb$
+ 197272 pts/5    00:00:00 pipex$
+ 197279 pts/5    00:00:00 ps$
