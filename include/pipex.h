@@ -13,6 +13,11 @@
 #ifndef PIPEX_H
 # define PIPEX_H
 
+typedef struct s_pipeline {
+	int	*array;
+	int	len;
+}	t_pipeline;
+
 void	error(char *e);
 
 # define HELP_MESSAGE "Usage: ./pipex <file_in> <cmd1> ... <cmdn> <file_out>\n"

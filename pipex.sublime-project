@@ -10,7 +10,7 @@
 		{
 			"working_dir": "$project_path",
 			"name": "Run pipex",
-			"shell_cmd": "make pipex && ./pipex infile '/usr/bin/ps -a' '/usr/bin/cat -e' outfile"
+			"shell_cmd": "make pipex && ./pipex infile '/usr/bin/ps -a' '/usr/bin/echo' outfile"
 		}
 	]
 }

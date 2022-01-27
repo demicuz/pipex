@@ -70,25 +70,25 @@ void	swap(int *a, int *b){
 // {file_in, pipe1_out, pipe1_in, ..., pipen_out, pipen_in, file_out}
 int	*create_pipeline(int n_pipes, int fd_in, int fd_out)
 {
-	int *pipeline;
+	int	*pl;
 	int i;
 	int ret;
 
-	pipeline = malloc(sizeof(int *) * (n_pipes * 2 + 2));
-	if (pipeline == NULL)
+	pl = malloc(sizeof(int *) * (n_pipes * 2 + 2));
+	if (pl == NULL)
 		error("malloc");
-	pipeline[0] = fd_in;
-	pipeline[n_pipes * 2 + 1] = fd_out;
+	pl[0] = fd_in;
+	pl[n_pipes * 2 + 1] = fd_out;
 	i = 0;
 	while (i < n_pipes)
 	{
-		ret = pipe(&pipeline[i * 2 + 1]);
+		ret = pipe(&pl[i * 2 + 1]);
 		if (ret == -1)
 			error("pipe");
-		swap(&pipeline[i * 2 + 1], &pipeline[i * 2 + 2]);
+		swap(&pl[i * 2 + 1], &pl[i * 2 + 2]);
 		i++;
 	}
-	return pipeline;
+	return pl;
 }
 
 // void	execute_command(const char *cmd, char **envp, int fd_in, int fd_out)
@@ -107,6 +107,19 @@ int	*create_pipeline(int n_pipes, int fd_in, int fd_out)
 // 	error("execve");
 // }
 
+void	close_fds(t_pipeline *pl)
+{
+	int	i;
+
+	i = 0;
+	while (i < pl->len)
+	{
+		close(pl->array[i * 2]);
+		close(pl->array[i * 2 + 1]);
+		i++;
+	}
+}
+
 void	execute_command(const char *cmd, const char **envp, int *fd)
 {
 	char	**cmd_split;
@@ -114,7 +127,7 @@ void	execute_command(const char *cmd, const char **envp, int *fd)
 	cmd_split = ft_split(cmd, ' ');
 	dup2(fd[0], STDIN_FILENO);
 	dup2(fd[1], STDOUT_FILENO);
-	// TODO close all
+	// TODO close all in one place maybe?
 	close(fd[0]);
 	close(fd[1]);
 	// TODO check if can access command
@@ -152,13 +165,13 @@ void	pipex(int argc, const char *argv[], const char *envp[])
 {
 	int	fd_in;
 	int	fd_out;
-	int	*pipeline;
+	int	*pl;
 	int	i;
 	pid_t pid;
 
 	fd_in = my_open(argv[0], O_RDONLY, 0);
 	fd_out = my_open(argv[argc - 1], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	pipeline = create_pipeline(argc - 3, fd_in, fd_out);
+	pl = create_pipeline(argc - 3, fd_in, fd_out);
 	i = 0;
 	while (i < argc - 2)
 	{
@@ -169,20 +182,17 @@ void	pipex(int argc, const char *argv[], const char *envp[])
 			error("fork");
 		else if (pid == 0)
 		{
-			close_unused_fds(pipeline, argc - 2, i);
-			execute_command(argv[i + 1], envp, &pipeline[i * 2]);
+			close_unused_fds(pl, argc - 2, i);
+			execute_command(argv[i + 1], envp, &pl[i * 2]);
 		}
 		i++;
 	}
-	i = 0;
-	pid_t wpid;
-	while ((wpid = wait(NULL)) > 0)
-		printf("Done with process %d\n", wpid);
-	puts("Should be finished now");
 }
 
 int main(int argc, const char *argv[], const char *envp[])
 {
+	pid_t	wpid;
+
 	if (argc < 5)
 	{
 		ft_putstr_fd("Error: Bad arguments\n", 2);
@@ -190,5 +200,8 @@ int main(int argc, const char *argv[], const char *envp[])
 		return (EXIT_FAILURE);
 	}
 	pipex(argc - 1, &argv[1], envp);
+	while ((wpid = wait(NULL)) > 0)
+		printf("Done with process %d\n", wpid);
+	puts("Should be finished now");
 	return (EXIT_SUCCESS);
 }
