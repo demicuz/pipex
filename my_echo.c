@@ -9,5 +9,6 @@ int main(int argc, char const *argv[])
 	{
 		printf("argv[%d] : %s\n", i, argv[i]);
 	}
+	// printf("%zd\n", sizeof(int[2]));
 	return 0;
 }

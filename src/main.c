@@ -52,14 +52,58 @@ int	my_open(const char *file, int flags, mode_t mode)
 	else
 		fd = open(file, flags, mode);
 	if (fd == -1)
-		error("file");
+	{
+		if (flags == O_RDONLY)
+			error("file read");
+		else
+			error("file write");
+	}
 	return (fd);
 }
 
-void	execute_commands(int argc, const char *argv[], const char *envp[])
+// Returns an array of ints. Every pair corresponds to pipe read/write.
+int	*create_pipes(int n)
 {
-	int fd_in = my_open(argv[0], O_RDONLY, 0);
-	int fd_out = my_open(argv[argc - 1], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	int *pipes;
+	int i;
+	int ret;
+
+	pipes = malloc(sizeof(int *) * n * 2);
+	if (pipes == NULL)
+		error("malloc");
+	i = 0;
+	while (i < n)
+	{
+		ret = pipe(&pipes[i * 2]);
+		if (ret == -1)
+			error("pipe");
+		i++;
+	}
+	return pipes;
+}
+
+void	execute_command(const char *cmd, char **envp, int fd_in, int fd_out)
+{
+	char	**cmd_split;
+
+	cmd_split = ft_split(cmd, ' ');
+	dup2(fd_in, STDIN_FILENO);
+	dup2(fd_out, STDOUT_FILENO);
+	close(fd_in);
+	close(fd_out);
+	// TODO check if can access command
+	execve(cmd_split[0], cmd_split, envp);
+}
+
+void	pipex(int argc, const char *argv[], const char *envp[])
+{
+	int	fd_in;
+	int	fd_out;
+	int	*pipes;
+
+	fd_in = my_open(argv[0], O_RDONLY, 0);
+	fd_out = my_open(argv[argc - 1], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	pipes = create_pipes(argc - 3);
 	if (access("my_echo", X_OK) == -1)
 		error("access");
 	else
@@ -69,7 +113,6 @@ void	execute_commands(int argc, const char *argv[], const char *envp[])
 		if (execve("my_echo", cmd, (char**) envp) == -1)
 			error("execve");
 	}
-	// execute_commands(argc - 3, &(argv[2]), fd_in, fd_out);
 }
 
 int main(int argc, const char *argv[], const char *envp[])
@@ -80,6 +123,6 @@ int main(int argc, const char *argv[], const char *envp[])
 		ft_putstr_fd(HELP_MESSAGE, 1);
 		return (EXIT_FAILURE);
 	}
-	execute_commands(argc - 1, &argv[1], envp);
+	pipex(argc - 1, &argv[1], envp);
 	return (EXIT_SUCCESS);
 }
