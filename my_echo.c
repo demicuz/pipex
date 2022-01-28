@@ -16,5 +16,6 @@ int main(int argc, char const *argv[])
 		buffer[ret] = '\0';
 		puts(buffer);
 	}
+	free(buffer);
 	return 0;
 }

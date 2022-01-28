@@ -132,7 +132,7 @@ char	*get_path(char *name, const char *envp[])
 	if (access(name, X_OK) == 0)
 		return name;
 	i = 0;
-	while (ft_strncmp(envp[i], "PATH", 4) != 0)
+	while (ft_strncmp(envp[i], "PATH=", 5) != 0)
 		i++;
 	dirs = ft_split(envp[i] + 5, ':');
 	slash_name = ft_strjoin("/", name);

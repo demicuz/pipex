@@ -15,8 +15,8 @@ OBJ			:= $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 # TODO
 CC			:= clang
 CPPFLAGS	:= -I include -I $(LIBFT_DIR) -MMD -MP
-CFLAGS		:= -Wall -g#-Werror -Wextra
-LDFLAGS		:= -L$(LIB_DIR)
+CFLAGS		:= -Wall -g -fsanitize=address#-Werror -Wextra
+LDFLAGS		:= -L$(LIB_DIR) -fsanitize=address
 LDLIBS		:= -lft
 
 .PHONY:	all bonus clean fclean re
