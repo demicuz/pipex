@@ -14,7 +14,6 @@
 #include <sys/types.h>
 #include <wait.h>
 #include <unistd.h>
-#include <pipex.h>
 #include <stdlib.h>
 #include <fcntl.h>
 // #include <limits.h>
@@ -32,12 +31,7 @@ int	my_open(const char *file, int flags, mode_t mode)
 	else
 		fd = open(file, flags, mode);
 	if (fd == -1)
-	{
-		if (flags == O_RDONLY)
-			error("file read");
-		else
-			error("file write");
-	}
+		error((char*) file);
 	return (fd);
 }
 
