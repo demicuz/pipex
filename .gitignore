@@ -7,3 +7,5 @@ compile_commands.json
 pipex
 save.sh
 my_echo
+infile
+outfile
