@@ -8,7 +8,6 @@ typedef struct s {
 int main(int argc, char const *argv[])
 {
 	puts("doin a leak");
-	wat thefuk;
-	thefuk.p = malloc(1000);
-	return 0;
+	wat s;
+	s.p = malloc(1000);
 }

@@ -8,7 +8,8 @@ LIBFT_DIR	:= libft
 
 LIBFT		:= $(LIB_DIR)/libft.a
 
-SRC_FILES	:= main.c utils.c ft_printf.c ft_printf_utils.c
+SRC_FILES	:= main.c utils.c ft_printf.c ft_printf_utils.c get_next_line.c \
+               get_next_line_utils.c
 SRC			:= $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 OBJ			:= $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
@@ -16,7 +17,7 @@ OBJ			:= $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 CC			:= clang
 CPPFLAGS	:= -I include -I $(LIBFT_DIR) -MMD -MP
 CFLAGS		:= -Wall -g#-fsanitize=address#-Werror -Wextra
-LDFLAGS		:= -L$(LIB_DIR) -fsanitize=address
+LDFLAGS		:= -L$(LIB_DIR)#-fsanitize=address
 LDLIBS		:= -lft
 
 .PHONY:	all bonus clean fclean re

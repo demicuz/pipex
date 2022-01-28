@@ -19,6 +19,7 @@
 // #include <limits.h>
 
 #include <libft.h>
+#include <get_next_line.h>
 #include <ft_printf.h>
 #include <pipex.h>
 
@@ -69,7 +70,7 @@ void	create_pipeline(t_pipeline *pl, int n_pipes, int fd_in, int fd_out)
 }
 
 // TODO
-// Have to free pl->array, otherwise Valgrind shows a leak create_pipeline().
+// Have to free pl->array, otherwise Valgrind shows a leak in create_pipeline().
 // Wat?
 void	close_fds(t_pipeline *pl)
 {
@@ -160,7 +161,10 @@ void	execute_cmd(const char *cmd, const char *envp[], int *fd, t_pipeline *pl)
 	error(cmd_split[0]);
 }
 
-void	pipex(int argc, const char *argv[], const char *envp[])
+// TODO if I just call error("fork") and parent has children, those become
+// zombies in case of a fork error (I think). But they should get killed by init
+// anyway.
+int	pipex(int argc, const char *argv[], const char *envp[])
 {
 	int	fd_in;
 	int	fd_out;
@@ -178,10 +182,7 @@ void	pipex(int argc, const char *argv[], const char *envp[])
 		if (pid == -1)
 		{
 			ft_putstr("Error creating a fork\n");
-			return ;
-			// TODO if I just call error("fork") and parent has children, those
-			// become zombies in case of error (I think)
-			// error("fork");
+			return (1);
 		}
 		else if (pid == 0)
 			execute_cmd(argv[i + 1], envp, &pl.array[i * 2], &pl);
@@ -189,21 +190,34 @@ void	pipex(int argc, const char *argv[], const char *envp[])
 		i++;
 	}
 	close_fds(&pl);
+	return (0);
+}
+
+int	pipex_heredoc(int argc, const char *argv[], const char *envp[])
+{
+	return (0);
 }
 
 int main(int argc, const char *argv[], const char *envp[])
 {
 	pid_t	wpid;
+	int		exit_code;
 
 	if (argc < 5)
 	{
 		ft_putstr_fd("Error: Bad arguments\n", 2);
 		ft_putstr_fd(HELP_MESSAGE, 1);
-		return (EXIT_FAILURE);
+		exit(EXIT_FAILURE);
 	}
-	pipex(argc - 1, &argv[1], envp);
+	if (ft_strncmp(argv[1], "here_doc", 8) == 0)
+		exit_code = pipex_heredoc(argc - 2, &argv[2], envp);
+	else
+		exit_code = pipex(argc - 1, &argv[1], envp);
 	while ((wpid = wait(NULL)) > 0)
 		ft_printf("Done with: %d\n", wpid);
-	puts("Should be finished now");
-	return (EXIT_SUCCESS);
+	ft_putstr("Should be done now\n");
+	if (exit_code == 0)
+		exit(EXIT_SUCCESS);
+	else
+		exit(EXIT_FAILURE);
 }

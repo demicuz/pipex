@@ -10,25 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+# include <stdlib.h>
+# include <libft.h>
+
+typedef struct s_fd_list
 {
-	t_list	*current;
-	t_list	*prev;
+	int					fd;
+	char				*buffer;
+	char				*b_pos;
+	char				*word_start;
+	struct s_fd_list	*next;
+}	t_fd_list;
 
-	if (!lst)
-		return ;
-	current = *lst;
-	prev = current;
-	while (current)
-	{
-		if (current->data)
-			del(current->data);
-		current = current->next;
-		free(prev);
-		prev = current;
-	}
-	*lst = NULL;
-}
+char	*get_next_line(int fd);
+
+char	*ft_strput(char *dest, char *src, char *str_end);
+int		ft_lst_add(t_list **lst, char *word_start, char *word_end);
+char	*ft_consume(t_fd_list *s, size_t *line_len);
+char	*ft_join(t_list *lst, char *line_start, char *line_end, size_t len);
+
+#endif
