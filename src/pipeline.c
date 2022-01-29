@@ -21,6 +21,7 @@
 void	create_pipeline(t_pipeline *pl, int n_pipes, int fd_in, int fd_out)
 {
 	int	i;
+	int	fd[2];
 
 	pl->array = malloc(sizeof(int) * (n_pipes * 2 + 2));
 	if (pl->array == NULL)
@@ -31,9 +32,10 @@ void	create_pipeline(t_pipeline *pl, int n_pipes, int fd_in, int fd_out)
 	i = 0;
 	while (i < n_pipes)
 	{
-		if (pipe(&pl->array[i * 2 + 1]) == -1)
+		if (pipe(fd) == -1)
 			error("pipe");
-		swap(&pl->array[i * 2 + 1], &pl->array[i * 2 + 2]);
+		pl->array[i * 2 + 2] = fd[0];
+		pl->array[i * 2 + 1] = fd[1];
 		i++;
 	}
 }

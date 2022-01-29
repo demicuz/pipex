@@ -18,15 +18,6 @@ void	error(char *e)
 	exit(EXIT_FAILURE);
 }
 
-void	swap(int *a, int *b)
-{
-	int	t;
-
-	t = *a;
-	*a = *b;
-	*b = t;
-}
-
 int	my_open(const char *file, int flags, mode_t mode)
 {
 	int	fd;

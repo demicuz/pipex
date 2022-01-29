@@ -30,7 +30,6 @@ typedef struct s_pipeline {
 }	t_pipeline;
 
 void	error(char *e);
-void	swap(int *a, int *b);
 void	close_fds(t_pipeline *pl);
 void	free_string_array(char *a[]);
 
