@@ -10,11 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <sys/types.h>
-#include <wait.h>
-
 #include <pipex.h>
-#include <get_next_line.h>
 
 // TODO In case of a fork error if I just call error("fork") and parent has
 // children, those become zombies (I think). But they should get killed by init.
