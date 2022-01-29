@@ -92,6 +92,8 @@ void	exec_cmd(const char *cmd, const char *envp[], int *fd, t_pipeline *pl)
 }
 
 // TODO maybe return the last command's exit code somehow?
+// TODO In case of a fork error if I just call error("fork") and parent has
+// children, those become zombies (I think). But they should get killed by init.
 int	exec_pipeline(int n_cmds, const char *cmds[], const char *envp[],
 	t_pipeline *pl)
 {

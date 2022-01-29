@@ -12,8 +12,6 @@
 
 #include <pipex.h>
 
-// TODO In case of a fork error if I just call error("fork") and parent has
-// children, those become zombies (I think). But they should get killed by init.
 int	pipex(int argc, const char *argv[], const char *envp[])
 {
 	int			fd_in;
