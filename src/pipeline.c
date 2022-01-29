@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <pipex.h>
+#include <stdlib.h>
 
 // Returns an array of ints. Every pair corresponds to read/write fd.
 // The first one is fd_in, then pipes, the last one is fd_out:
@@ -77,6 +79,7 @@ char	*get_path(char *name, const char *envp[])
 	return (abs_path);
 }
 
+// TODO maybe create ft_printf_fd or something?
 void	exec_cmd(const char *cmd, const char *envp[], int *fd, t_pipeline *pl)
 {
 	char	**cmd_split;
@@ -88,7 +91,10 @@ void	exec_cmd(const char *cmd, const char *envp[], int *fd, t_pipeline *pl)
 	dup2(fd[1], STDOUT_FILENO);
 	close_fds(pl);
 	execve(path, cmd_split, (char **) envp);
-	error(cmd_split[0]);
+	ft_putstr_fd("command not found: ", 2);
+	ft_putstr_fd(cmd_split[0], 2);
+	ft_putstr_fd("\n", 2);
+	exit(EXIT_FAILURE);
 }
 
 // TODO maybe return the last command's exit code somehow?
