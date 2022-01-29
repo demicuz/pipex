@@ -10,3 +10,7 @@ my_echo
 infile
 outfile
 leaktest
+
+make_error.c
+my_echo.c
+leaktest.c
