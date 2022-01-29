@@ -151,27 +151,6 @@ void	execute_cmd(const char *cmd, const char *envp[], int *fd, t_pipeline *pl)
 	error(cmd_split[0]);
 }
 
-int	wait_and_get_status(pid_t last_pid)
-{
-	int		status;
-	int		last_status;
-	pid_t	pid;
-
-	ft_printf("Last pid is %d\n", last_pid);
-
-	status = 0;
-	pid = waitpid(-1, &status, 0);
-	while (pid > 0)
-	{
-		if (pid == last_pid)
-			last_status = status;
-		ft_printf("Done with process: %d, exit status: %d\n", pid, WEXITSTATUS(status));
-		pid = waitpid(-1, &status, 0);
-	}
-	ft_printf("Exit status: %d\n", WEXITSTATUS(last_status));
-	return (last_status);
-}
-
 int	execute_pipeline(int n_cmds, const char *cmds[], const char *envp[],
                      t_pipeline *pl)
 {
@@ -193,8 +172,7 @@ int	execute_pipeline(int n_cmds, const char *cmds[], const char *envp[],
 		i++;
 	}
 	close_fds(pl);
-	// wait_and_get_status(pid);
-	return (wait_and_get_status(pid));
+	return (EXIT_SUCCESS);
 }
 
 // TODO In case of a fork error if I just call error("fork") and parent has
@@ -243,9 +221,8 @@ int	pipex_heredoc(int argc, const char *argv[], const char *envp[])
 int main(int argc, const char *argv[], const char *envp[])
 {
 	int		exit_code;
-	int		status;
+	pid_t	pid;
 
-	status = 0;
 	if (argc < 5 || (ft_strncmp(argv[1], "here_doc", 8) == 0 && argc < 6))
 	{
 		ft_putstr_fd("Error: Bad arguments\n", 2);
@@ -256,6 +233,11 @@ int main(int argc, const char *argv[], const char *envp[])
 		exit_code = pipex_heredoc(argc - 2, &argv[2], envp);
 	else
 		exit_code = pipex(argc - 1, &argv[1], envp);
-	ft_putstr("Finished\n");
+	pid = wait(NULL);
+	while (pid > 0)
+	{
+		ft_printf("Done with process: %d\n", pid);
+		pid = wait(NULL);
+	}
 	exit(WEXITSTATUS(exit_code));
 }
