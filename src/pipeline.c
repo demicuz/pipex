@@ -90,6 +90,7 @@ void	exec_cmd(const char *cmd, const char *envp[], int *fd, t_pipeline *pl)
 	error(cmd_split[0]);
 }
 
+// TODO maybe return the last command's exit code somehow?
 int	exec_pipeline(int n_cmds, const char *cmds[], const char *envp[],
 	t_pipeline *pl)
 {
