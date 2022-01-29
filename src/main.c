@@ -151,6 +151,27 @@ void	execute_cmd(const char *cmd, const char *envp[], int *fd, t_pipeline *pl)
 	error(cmd_split[0]);
 }
 
+int	wait_and_get_status(pid_t last_pid)
+{
+	int		status;
+	int		last_status;
+	pid_t	pid;
+
+	ft_printf("Last pid is %d\n", last_pid);
+
+	status = 0;
+	pid = waitpid(-1, &status, 0);
+	while (pid > 0)
+	{
+		if (pid == last_pid)
+			last_status = status;
+		ft_printf("Done with process: %d, exit status: %d\n", pid, WEXITSTATUS(status));
+		pid = waitpid(-1, &status, 0);
+	}
+	ft_printf("Exit status: %d\n", WEXITSTATUS(last_status));
+	return (last_status);
+}
+
 int	execute_pipeline(int n_cmds, const char *cmds[], const char *envp[],
                      t_pipeline *pl)
 {
@@ -172,13 +193,8 @@ int	execute_pipeline(int n_cmds, const char *cmds[], const char *envp[],
 		i++;
 	}
 	close_fds(pl);
-	pid = wait(NULL);
-	while (pid > 0)
-	{
-		ft_printf("Done with process: %d\n", pid);
-		pid = wait(NULL);
-	}
-	return (EXIT_SUCCESS);
+	// wait_and_get_status(pid);
+	return (wait_and_get_status(pid));
 }
 
 // TODO In case of a fork error if I just call error("fork") and parent has
@@ -241,5 +257,5 @@ int main(int argc, const char *argv[], const char *envp[])
 	else
 		exit_code = pipex(argc - 1, &argv[1], envp);
 	ft_putstr("Finished\n");
-	exit(exit_code);
+	exit(WEXITSTATUS(exit_code));
 }
