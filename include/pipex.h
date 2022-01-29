@@ -36,7 +36,7 @@ char	*search_dirs(char *dirs[], char *slash_name);
 char	*get_path(char *name, const char *envp[]);
 void	exec_cmd(const char *cmd, const char *envp[], int *fd, t_pipeline *pl);
 
-// These two are at the bottom bs according to norminette, they're misaligned
+// These two are at the bottom bc according to norminette, they're misaligned
 // when there's only one tab. sic.
 int		exec_pipeline(int n_cmds, const char *cmds[], const char *envp[],
 			t_pipeline *pl);
