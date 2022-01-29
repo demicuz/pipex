@@ -9,7 +9,7 @@ LIBFT_DIR	:= libft
 LIBFT		:= $(LIB_DIR)/libft.a
 
 SRC_FILES	:= main.c utils.c ft_printf.c ft_printf_utils.c get_next_line.c \
-               get_next_line_utils.c
+               get_next_line_utils.c pipeline.c
 SRC			:= $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 OBJ			:= $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
