@@ -88,8 +88,7 @@ void	exec_cmd(const char *cmd, const char *envp[], int *fd, t_pipeline *pl)
 	dup2(fd[1], STDOUT_FILENO);
 	close_fds(pl);
 	execve(path, cmd_split, (char **) envp);
-	ft_printf("command not found: %s\n", cmd_split[0]);
-	exit(EXIT_FAILURE);
+	error(cmd_split[0]);
 }
 
 // TODO maybe return the last command's exit code somehow?
