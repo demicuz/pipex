@@ -213,6 +213,7 @@ int	pipex_heredoc(int argc, const char *argv[], const char *envp[])
 		line = get_heredoc_line();
 	}
 	free(line);
+	close(fd_heredoc[1]);
 	create_pipeline(&pl, argc - 3, fd_heredoc[0], fd_out);
 	return (execute_pipeline(argc - 2, &argv[1], envp, &pl));
 }
