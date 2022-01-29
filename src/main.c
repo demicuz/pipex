@@ -172,6 +172,12 @@ int	execute_pipeline(int n_cmds, const char *cmds[], const char *envp[],
 		i++;
 	}
 	close_fds(pl);
+	pid = wait(NULL);
+	while (pid > 0)
+	{
+		ft_printf("Done with process: %d\n", pid);
+		pid = wait(NULL);
+	}
 	return (EXIT_SUCCESS);
 }
 
@@ -220,9 +226,10 @@ int	pipex_heredoc(int argc, const char *argv[], const char *envp[])
 
 int main(int argc, const char *argv[], const char *envp[])
 {
-	pid_t	wpid;
 	int		exit_code;
+	int		status;
 
+	status = 0;
 	if (argc < 5 || (ft_strncmp(argv[1], "here_doc", 8) == 0 && argc < 6))
 	{
 		ft_putstr_fd("Error: Bad arguments\n", 2);
@@ -233,8 +240,6 @@ int main(int argc, const char *argv[], const char *envp[])
 		exit_code = pipex_heredoc(argc - 2, &argv[2], envp);
 	else
 		exit_code = pipex(argc - 1, &argv[1], envp);
-	while ((wpid = wait(NULL)) > 0)
-		ft_printf("Done with: %d\n", wpid);
-	ft_putstr("Should be done now\n");
+	ft_putstr("Finished\n");
 	exit(exit_code);
 }
