@@ -50,7 +50,6 @@ void	swap(int *a, int *b) {
 void	create_pipeline(t_pipeline *pl, int n_pipes, int fd_in, int fd_out)
 {
 	int i;
-	int ret;
 
 	pl->array = malloc(sizeof(int *) * (n_pipes * 2 + 2));
 	if (pl->array == NULL)
@@ -61,8 +60,7 @@ void	create_pipeline(t_pipeline *pl, int n_pipes, int fd_in, int fd_out)
 	i = 0;
 	while (i < n_pipes)
 	{
-		ret = pipe(&pl->array[i * 2 + 1]);
-		if (ret == -1)
+		if (pipe(&pl->array[i * 2 + 1]) == -1)
 			error("pipe");
 		swap(&pl->array[i * 2 + 1], &pl->array[i * 2 + 2]);
 		i++;
@@ -149,53 +147,74 @@ void	execute_cmd(const char *cmd, const char *envp[], int *fd, t_pipeline *pl)
 	dup2(fd[0], STDIN_FILENO);
 	dup2(fd[1], STDOUT_FILENO);
 	close_fds(pl);
-	// if (path == NULL)
-	// {
-	// 	// TODO maybe use printf?
-	// 	ft_putstr_fd("Command not found: ", STDERR_FILENO);
-	// 	ft_putstr_fd(cmd, STDERR_FILENO);
-	// 	ft_putstr_fd("\n", STDERR_FILENO);
-	// 	exit(EXIT_FAILURE);
-	// }
 	execve(path, cmd_split, (char **) envp);
 	error(cmd_split[0]);
 }
 
-// TODO if I just call error("fork") and parent has children, those become
-// zombies in case of a fork error (I think). But they should get killed by init
-// anyway.
-int	pipex(int argc, const char *argv[], const char *envp[])
+int	execute_pipeline(int n_cmds, const char *cmds[], const char *envp[],
+                     t_pipeline *pl)
 {
-	int	fd_in;
-	int	fd_out;
-	t_pipeline pl;
-	int	i;
-	pid_t pid;
+	int		i;
+	pid_t	pid;
 
-	fd_in = my_open(argv[0], O_RDONLY, 0);
-	fd_out = my_open(argv[argc - 1], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	create_pipeline(&pl, argc - 3, fd_in, fd_out);
 	i = 0;
-	while (i < argc - 2)
+	while (i < n_cmds)
 	{
 		pid = fork();
 		if (pid == -1)
 		{
 			ft_putstr("Error creating a fork\n");
-			return (1);
+			return (EXIT_FAILURE);
 		}
 		else if (pid == 0)
-			execute_cmd(argv[i + 1], envp, &pl.array[i * 2], &pl);
+			execute_cmd(cmds[i], envp, &pl->array[i * 2], pl);
 		ft_printf("created procces #%d: %d\n", i + 1, pid);
 		i++;
 	}
-	close_fds(&pl);
-	return (0);
+	close_fds(pl);
+	return (EXIT_SUCCESS);
+}
+
+// TODO In case of a fork error if I just call error("fork") and parent has
+// children, those become zombies (I think). But they should get killed by init.
+int	pipex(int argc, const char *argv[], const char *envp[])
+{
+	int	fd_in;
+	int	fd_out;
+	t_pipeline pl;
+
+	fd_in = my_open(argv[0], O_RDONLY, 0);
+	fd_out = my_open(argv[argc - 1], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	create_pipeline(&pl, argc - 3, fd_in, fd_out);
+	return (execute_pipeline(argc - 2, &argv[1], envp, &pl));
+}
+
+char	*get_heredoc_line()
+{
+	ft_putstr("heredoc> ");
+	return (get_next_line(STDIN_FILENO));
 }
 
 int	pipex_heredoc(int argc, const char *argv[], const char *envp[])
 {
-	return (0);
+	int			fd_heredoc[2];
+	int			fd_out;
+	t_pipeline	pl;
+	char		*line;
+
+	fd_out = my_open(argv[argc - 1], O_WRONLY | O_CREAT | O_APPEND, 0664);
+	if (pipe(fd_heredoc) == -1)
+		error("pipe");
+	line = get_heredoc_line();
+	while (line && ft_strncmp(line, argv[0], ft_strlen(argv[0])) != 0)
+	{
+		write(fd_heredoc[1], line, ft_strlen(line));
+		free(line);
+		line = get_heredoc_line();
+	}
+	free(line);
+	create_pipeline(&pl, argc - 3, fd_heredoc[0], fd_out);
+	return (execute_pipeline(argc - 2, &argv[1], envp, &pl));
 }
 
 int main(int argc, const char *argv[], const char *envp[])
@@ -203,7 +222,7 @@ int main(int argc, const char *argv[], const char *envp[])
 	pid_t	wpid;
 	int		exit_code;
 
-	if (argc < 5)
+	if (argc < 5 || (ft_strncmp(argv[1], "here_doc", 8) == 0 && argc < 6))
 	{
 		ft_putstr_fd("Error: Bad arguments\n", 2);
 		ft_putstr_fd(HELP_MESSAGE, 1);
@@ -216,8 +235,5 @@ int main(int argc, const char *argv[], const char *envp[])
 	while ((wpid = wait(NULL)) > 0)
 		ft_printf("Done with: %d\n", wpid);
 	ft_putstr("Should be done now\n");
-	if (exit_code == 0)
-		exit(EXIT_SUCCESS);
-	else
-		exit(EXIT_FAILURE);
+	exit(exit_code);
 }

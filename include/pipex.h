@@ -20,6 +20,8 @@ typedef struct s_pipeline {
 
 void	error(char *e);
 
-# define HELP_MESSAGE "Usage: ./pipex <file_in> <cmd1> ... <cmdn> <file_out>\n"
+# define HELP_MESSAGE "\
+Usage: ./pipex <file_in> <cmd1> ... <cmdn> <file_out>\n\
+       ./pipex here_doc <delimiter> <cmd1> ... <cmdn> <file_out>\n"
 
 #endif
