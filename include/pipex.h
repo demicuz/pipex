@@ -17,12 +17,12 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <fcntl.h>
+# include <sys/types.h>
+# include <wait.h>
 
 # include <libft.h>
 # include <ft_printf.h>
 # include <get_next_line.h>
-# include <sys/types.h>
-# include <wait.h>
 
 
 typedef struct s_pipeline {
