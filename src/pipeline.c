@@ -22,7 +22,7 @@ void	create_pipeline(t_pipeline *pl, int n_pipes, int fd_in, int fd_out)
 	pl->array = malloc(sizeof(int) * (n_pipes * 2 + 2));
 	if (pl->array == NULL)
 		error("malloc");
-	pl->len = (n_pipes + 1) * 2;
+	pl->len = n_pipes * 2 + 2;
 	pl->array[0] = fd_in;
 	pl->array[n_pipes * 2 + 1] = fd_out;
 	i = 0;
