@@ -14,7 +14,7 @@
 
 // Returns an array of ints. Every pair corresponds to read/write fd.
 // The first one is fd_in, then pipes, the last one is fd_out.
-// {file_in, pipe1_out, pipe1_in, ..., pipen_out, pipen_in, file_out}
+// {file_in, pipe1_out, pipe1_in, ..., pipeN_out, pipeN_in, file_out}
 void	create_pipeline(t_pipeline *pl, int n_pipes, int fd_in, int fd_out)
 {
 	int	i;
