@@ -64,7 +64,7 @@ int	main(int argc, const char *argv[], const char *envp[])
 	int		exit_code;
 	pid_t	pid;
 
-	if (argc < 5 || (ft_strncmp(argv[1], "here_doc", 8) == 0 && argc < 6))
+	if (argc < 4 || (ft_strncmp(argv[1], "here_doc", 8) == 0 && argc < 5))
 	{
 		ft_putstr_fd("Error: Bad arguments\n", 2);
 		ft_putstr_fd(HELP_MESSAGE, 1);
