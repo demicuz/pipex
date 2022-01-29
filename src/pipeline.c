@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include <pipex.h>
-#include <stdlib.h>
 
 // Returns an array of ints. Every pair corresponds to read/write fd.
 // The first one is fd_in, then pipes, the last one is fd_out.
