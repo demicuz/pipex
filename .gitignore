@@ -2,6 +2,7 @@
 /obj
 /.cache
 *.o
+*.a
 compile_commands.json
 *.sublime-workspace
 pipex
