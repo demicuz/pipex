@@ -43,7 +43,7 @@ int		exec_pipeline(int n_cmds, const char *cmds[], const char *envp[],
 int		my_open(const char *file, int flags, mode_t mode);
 
 # define HELP_MESSAGE "\
-Usage: ./pipex <file_in> <cmd1> ... <cmdn> <file_out>\n\
-       ./pipex here_doc <delimiter> <cmd1> ... <cmdn> <file_out>\n"
+Usage: ./pipex FILE_IN CMD_1 [CMD_N]... FILE_OUT\n\
+       ./pipex here_doc DELIMITER CMD_1 [CMD_N]... FILE_OUT\n"
 
 #endif
