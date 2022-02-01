@@ -1,2 +1,2 @@
 # pipex
-A school 21 project. Work in progress
+A school 21 project.

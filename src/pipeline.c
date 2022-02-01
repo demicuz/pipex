@@ -14,6 +14,11 @@
 #include <pipex.h>
 #include <stdlib.h>
 
+// TODO It's a bad approach. If we have a lot of commands, it opens a ton of
+// file descriptors and closes them in each child process. Supports up to about
+// 500 piped commands. Which is certainly enough, but an unnecessary limitation
+// anyway.
+// ---
 // Returns an array of ints. Every pair corresponds to read/write fd.
 // The first one is fd_in, then pipes, the last one is fd_out:
 // {file_in, pipe1_out, pipe1_in, ..., pipeN_out, pipeN_in, file_out}
