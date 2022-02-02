@@ -120,6 +120,7 @@ int	exec_pipeline(int n_cmds, const char *cmds[], const char *envp[],
 		if (pid == -1)
 		{
 			ft_putstr("Error creating a fork\n");
+			close_fds(pl);
 			return (EXIT_FAILURE);
 		}
 		else if (pid == 0)
