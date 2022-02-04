@@ -30,6 +30,12 @@ char	*get_heredoc_line(void)
 	return (get_next_line(STDIN_FILENO));
 }
 
+int	is_eof(const char *eof, const char *line)
+{
+	return (ft_strncmp(line, eof, ft_strlen(eof)) == 0 && \
+		ft_strlen(eof) + 1 == ft_strlen(line));
+}
+
 int	pipex_heredoc(int argc, const char *argv[], const char *envp[])
 {
 	int			fd_heredoc[2];
@@ -41,7 +47,7 @@ int	pipex_heredoc(int argc, const char *argv[], const char *envp[])
 	if (pipe(fd_heredoc) == -1)
 		error("pipe");
 	line = get_heredoc_line();
-	while (line && ft_strncmp(line, argv[0], ft_strlen(argv[0])) != 0)
+	while (line && !is_eof(argv[0], line))
 	{
 		write(fd_heredoc[1], line, ft_strlen(line));
 		free(line);
@@ -64,7 +70,7 @@ int	main(int argc, const char *argv[], const char *envp[])
 		ft_putstr_fd(HELP_MESSAGE, 1);
 		exit(EXIT_FAILURE);
 	}
-	if (ft_strncmp(argv[1], "here_doc", 8) == 0)
+	if (ft_strcmp(argv[1], "here_doc") == 0)
 		exit_code = pipex_heredoc(argc - 2, &argv[2], envp);
 	else
 		exit_code = pipex(argc - 1, &argv[1], envp);
